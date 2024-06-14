@@ -10,7 +10,7 @@ import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import compress from '@playform/compress';
 
-import astrowind from './vendor/integration';
+import catalyst from './vendor/integration';
 
 import {
   readingTimeRemarkPlugin,
@@ -69,7 +69,7 @@ export default defineConfig({
       Logger: 1,
     }),
 
-    astrowind({
+    catalyst({
       config: './src/config.yaml',
     }),
   ],

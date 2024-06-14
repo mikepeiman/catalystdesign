@@ -1,5 +1,5 @@
 site:
-  name: Catalyst Web Design
+  name: catalyst
   site: 'https://catalystweb.design'
   base: '/'
   trailingSlash: false
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Catalyst Web
-    template: '%s — Catalyst Web'
+    default: catalyst
+    template: '%s — catalyst'
   description: "\U0001F680 An agency catalyzing growth and great experiences for Startups, Small Business, SaaS, Professional Portfolios, Landing Pages & Blogs."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Catalyst Web
+    site_name: catalyst
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@mikepeiman'
+    site: '@mikepeiman'
     cardType: summary_large_image
 
 i18n:

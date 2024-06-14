@@ -1,7 +1,7 @@
 {
   "name": "@mikepeiman/catalystwebdesign",
   "version": "0.0.1",
-  "description": "Catalyst Web Design: A Design & Development Agency.",
+  "description": "catalyst Design: A Design & Development Agency.",
   "type": "module",
   "private": true,
   "engines": {
