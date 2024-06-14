@@ -1,5 +1,5 @@
 site:
-  name: catalyst
+  name: Catalyst Web Design
   site: 'https://catalystweb.design'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: catalyst
+    default: Catalyst Web Design & Development
     template: '%s — catalyst'
-  description: "\U0001F680 An agency catalyzing growth and great experiences for Startups, Small Business, SaaS, Professional Portfolios, Landing Pages & Blogs."
+  description: "\U0001F680 A design & development agency building websites & apps for startups, small businesses, SaaS, and professionals."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: catalyst
+    site_name: Catalyst Web Design
     images:
       - url: '~/assets/images/default.png'
         width: 1200

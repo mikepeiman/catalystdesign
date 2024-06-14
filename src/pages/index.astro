@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'catalyst — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Catalyst Web Design: Websites & App Development For Small Business & Startups',
   ignoreTitleTemplate: true,
 };
 ---
@@ -25,27 +25,31 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Get A Quote',
         href: 'https://github.com/mikepeiman/catalyst',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:bolt',
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/catalyst-hero-1.png', alt: 'catalyst Design Hero Image' }}
+    image={{ src: '~/assets/images/ai-1.png', alt: 'catalyst Design Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> catalyst Design</span> + Tailwind CSS
+      <span class="grad-text-1 dark:text-white highlight">
+        Delight your customers & make more money.</span><br>
+
+        Beautiful websites that perform.<br>
+      <span class=" dark:text-white highlight">
+
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">catalyst</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">Catalyst Design</span> is a friendly, professional, reliable solution to your website & business growth needs.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">catalyst: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
+      <span class="block mb-1 font-bold text-blue-600">Quick, easy, and stress-free. That's our process.</span>
+      We deliver websites & landing pages, blogs & e-commerce.
+       and integrations, chatbots, custom coding and applications for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
       Blogs.
     </Fragment>
   </Hero>
@@ -59,43 +63,43 @@ const metadata = {
   <Features
     id="features"
     tagline="Features"
-    title="What you get with catalyst"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="What you get with Catalyst Design"
+    subtitle="In the business of delighting clients since 2013."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'A professional and efficient workflow',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Our process ensures that you have a streamlined experience, from onboarding to final handoff.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Conversion Rate Optimized',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'CRO makes you more money by increasing the number of people who complete your desired action on your website, eg. signing up for a newsletter or making a purchase.',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
+        title: 'Expert Best Practices',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'At Catalyst Design, we prioritize creating secure, fast, and user-friendly websites that deliver exceptional experiences and lasting value.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Fast Page Loading Times',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Efficiently designed websites improve search engine rankings, enhance user experience, and drive conversions.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'SEO Expertise',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          'Our team of SEO experts help increase website visibility and attract organic traffic, driving growth and revenue.',
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Collaboration and Innovation',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+          'We embrace a culture that fosters innovation, collaboration, and a dynamic user experience.',
         icon: 'tabler:bulb',
       },
     ]}
@@ -105,32 +109,33 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="catalyst's Blueprint: Fun Meets Functionality!"
+    tagline="Inside Our Agency"
+    title="Catalyst's Principles: Integrity, Excellence, and Care"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
+        title: 'Integrity',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'At Catalyst Design, we uphold the highest standards of honesty, reliability, and transparency in all our endeavors.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Excellence',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'We strive to deliver exceptional websites that exceed client expectations and provide a seamless user experience.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Care',
+        icon: 'tabler:heart',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Every aspect of our work is guided by a deep commitment to empathy, attention to detail, and a genuine desire to serve.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/ai-1.png',
+      alt: 'Colorful Image generated with Dall-E3 AI',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">An Experience That You Will Enjoy</h3>
       Gain a competitive advantage by incorporating industry leading practices
     </Fragment>
 
@@ -380,10 +385,10 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/mikepeiman/catalyst',
+        text: 'Get A Quote',
+        href: 'https://github.com/mikepeiman/catalystdesign',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:bolt',
       },
     ]}
   >
@@ -397,3 +402,22 @@ const metadata = {
     </Fragment>
   </CallToAction>
 </Layout>
+
+<style>
+
+.grad-text-1 {
+  background: var(--catalyst-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.grad-text-2 {
+  background: var(--catalyst-gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.grad-text-3 {
+  background: var(--catalyst-gradient-tertiary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
