@@ -23,11 +23,23 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<section class="flex flex-col w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800">
-	<div class="bg-black/50 flex flex-col w-full h-full">
+<section
+	class="flex flex-col w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
+>
+	<div class="bg-white/95 dark:bg-black/50 flex flex-col w-full h-full">
 		<Nav />
-		<div class="w-full h-full justify-center align-middle items-center ">
+		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />
 		</div>
 	</div>
 </section>
+
+<style>
+	:global(body,
+	body *) {
+		transition:
+			background-color 0.15s,
+			color 0.15s,
+			border-color 0.15s;
+	}
+</style>
