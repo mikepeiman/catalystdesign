@@ -1,0 +1,48 @@
+:root {
+    --catalyst-color-primary: #8C2ABA;
+    --catalyst-color-secondary: #241EFF;
+    --catalyst-color-tertiary: #FAAD17;
+    --catalyst-gradient-primary: linear-gradient(90deg, var(--catalyst-color-primary) 0%, var(--catalyst-color-secondary) 100%);
+    --catalyst-gradient-secondary: linear-gradient(90deg, var(--catalyst-color-secondary) 0%, var(--catalyst-color-tertiary) 100%);
+    --catalyst-gradient-tertiary: linear-gradient(90deg, var(--catalyst-color-tertiary) 0%, var(--catalyst-color-primary) 100%);
+}
+
+/* src/styles/global.css */
+.hero {
+    background: var(--catalyst-gradient-primary);
+    background-image: url('~/assets/images/ai-1.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Adjust the color and opacity as needed */
+    z-index: 1; /* Make sure the overlay is above the background but below the content */
+  }
+  .hero-dark::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255, 0.75); /* Adjust the color and opacity as needed */
+    z-index: 1; /* Make sure the overlay is above the background but below the content */
+  }
+  
+  .hero, .hero-dark > * {
+    position: relative; /* Make sure the content is above the overlay */
+    z-index: 2;
+  }
