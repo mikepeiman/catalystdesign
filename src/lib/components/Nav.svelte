@@ -1,4 +1,6 @@
 <script>
+	import DarkModeToggle from "./DarkModeToggle.svelte";
+
 	let items = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
@@ -9,7 +11,7 @@
 </script>
 
 <div class="h-20  flex justify-between relative font-inter">
-	<div class="flex items-center justify-center h-full mr-4 left-10">
+	<div class="flex items-center justify-center h-full mx-4 left-10">
 		<img src="/images/logo.svg" alt="Logo" class="h-12 self-center" />
         <h3 class="text-dark dark:text-white ml-3 text-lg font-bold">Catalyst</h3>
 	</div>
@@ -22,7 +24,10 @@
 			{/each}
 		</ul>
         </div>
-        <button
-            class="btn variant-filled-primary dark:text-white bg-primary-500 hover:bg-primary-600 border-none rounded-bl-xl"
-            >Get Started</button>
+        <div class="right flex h-full items-center mx-4">
+            <DarkModeToggle />
+            <button
+                class="btn variant-filled-primary dark:text-white bg-primary-500 hover:bg-primary-600 border-none rounded-sm"
+                >Get Started</button>
+        </div>
 </div>
