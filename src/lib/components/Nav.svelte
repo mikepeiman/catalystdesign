@@ -1,6 +1,6 @@
 <script>
 	import DarkModeToggle from "./DarkModeToggle.svelte";
-
+	import { GradientButton } from 'flowbite-svelte';
 	let items = [
 		{ name: 'Home', url: '/' },
 		{ name: 'About', url: '/about' },
@@ -12,7 +12,7 @@
 
 <div class="h-20 text-black dark:text-white flex justify-between relative font-inter">
 	<div class="flex items-center justify-center h-full mx-4 left-10">
-		<img src="/images/logo.svg" alt="Logo" class="h-12 self-center" />
+		<img src="/images/logo-blue.svg" alt="Logo" class="h-12 self-center" />
         <h3 class=" ml-3 text-lg font-bold">Catalyst</h3>
 	</div>
 	<div class=" flex justify-around items-center">
@@ -26,8 +26,6 @@
         </div>
         <div class="right flex h-full items-center mx-4">
             <DarkModeToggle />
-            <button
-                class="btn variant-filled-primary text-white bg-primary-500 hover:bg-primary-600 border-none rounded-sm"
-                >Get Started</button>
+			<GradientButton href="/contact" color="greenToBlue" size="md" class="mr-4">Login</GradientButton>
         </div>
 </div>
