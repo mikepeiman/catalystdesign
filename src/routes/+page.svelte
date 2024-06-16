@@ -1,15 +1,15 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
-	</div>
-</div>
+<script>
+	import { Section, Page404 } from 'flowbite-svelte-blocks';
+	import { Button } from 'flowbite-svelte';
+  </script>
+  
+  <Section name="page404">
+	<Page404>
+	  <svelte:fragment slot="h1">404</svelte:fragment>
+	  <svelte:fragment slot="paragraph">
+		<p class="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">Something's missing.</p>
+		<p class="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">Sorry, we can't find that page. You'll find lots to explore on the home page.</p>
+		<Button href="/" size="lg" color="red">Back to Homepage</Button>
+	  </svelte:fragment>
+	</Page404>
+  </Section>
