@@ -3,7 +3,7 @@
 	import { Button } from 'flowbite-svelte';
   </script>
   
-  <Section name="page404">
+  <Section name="page404" class="h-screen w-screen">
 	<Page404>
 	  <svelte:fragment slot="h1">404</svelte:fragment>
 	  <svelte:fragment slot="paragraph">
