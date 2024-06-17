@@ -52,12 +52,22 @@
 				</PricingItem>
 
 				<svelte:fragment slot="btn">
-					<GradientButton
-						href="/contact"
-						color="greenToBlue"
-						size="lg"
-						class="transition-all duration-200">Get started</GradientButton
-					>
+                    <GradientButton2
+                    gradientAngle="110deg"
+                    gradientAngleHover="110deg"
+                    gradientColors={[
+                      { color: 'var(--cyan-600)', stop: 0 },
+                      { color: 'var(--purple-800)', stop: 50 },
+                      { color: 'var(--blue-700)', stop: 100 }
+                    ]}
+                    gradientHoverColors={[
+                      { color: 'var(--cyan-500)', stop: 0 },
+                      { color: 'var(--purple-600)', stop: 50 },
+                      { color: 'var(--blue-600)', stop: 100 }
+                    ]}
+                  >
+                    Get started
+                  </GradientButton2>
 				</svelte:fragment>
 			</PricingItemWrapper>
 		</PricingCard>
@@ -91,11 +101,13 @@
 				</PricingItem>
 
 				<svelte:fragment slot="btn">
-					<GradientButton
-						href="/contact"
-						class="bg-gradient-to-br from-purple-900   to-cyan-500 transition-all duration-200 hover:from-purple-800 hover:to-cyan-600 hover:transition-all"
-						size="lg">Get started</GradientButton
-					>
+                    <GradientButton2
+                    gradientAngle="-60deg"
+                    gradientAngleHover="60deg"
+
+                  >
+                    Get started
+                  </GradientButton2>
 				</svelte:fragment>
 			</PricingItemWrapper>
 		</PricingCard>
@@ -129,36 +141,11 @@
 				</PricingItem>
 
 				<svelte:fragment slot="btn">
-					<GradientButton
-						href="/contact"
-						shadow="cyanToBlue"
-						class="bg-gradient-to-r from-blue-900 to-indigo-800 transition-all duration-500 hover:from-blue-700 hover:to-indigo-600"
-						size="lg">Get started</GradientButton
-					>
-
-					<CustomGradientButton
-                        gradientAngle="60deg"
-           
-						gradientStart="var(--cyan-500)"
-						gradientEnd="var(--cyan-900)"
-						gradientHoverStart="#0000ff"
-						gradientHoverEnd="#ff00ff">TEST</CustomGradientButton
-					>
-                    <!-- <GradientButton2 gradientStart="#ff0000" gradientEnd="#00ff00">TEST</GradientButton2> -->
                     <GradientButton2
-                    gradientColors={[
-                      { color: 'var(--cyan-500)', stop: 0 },
-                      { color: '#ffffff', stop: 50 },
-                      { color: '#000000', stop: 70 },
-                      { color: '#0000ff', stop: 100 }
-                    ]}
-                    gradientHoverColors={[
-                      { color: '#0f69b4', stop: 0 },
-                      { color: '#ff69b4', stop: 50 },
-                      { color: '#7f69f4', stop: 100 }
-                    ]}
+                    gradientAngle="-60deg"
+                    gradientAngleHover="60deg"
                   >
-                    Click me!
+                    Get started
                   </GradientButton2>
 				</svelte:fragment>
 			</PricingItemWrapper>
