@@ -9,8 +9,9 @@
 	} from 'flowbite-svelte-blocks';
 	import { Button } from 'flowbite-svelte';
 	import { GradientButton } from 'flowbite-svelte';
-	import  GradientButton2  from '$lib/components/flowbite/buttons/GradientButton2.svelte';
 	import CustomGradientButton from '$lib/components/CustomGradientButton.svelte';
+	import GradientButton2 from '$lib/components/GradientButton2.svelte';
+
 </script>
 
 <Section name="pricing">
@@ -136,12 +137,29 @@
 					>
 
 					<CustomGradientButton
-						gradientStart="#ff0000"
-						gradientEnd="#00ff00"
+                        gradientAngle="60deg"
+           
+						gradientStart="var(--cyan-500)"
+						gradientEnd="var(--cyan-900)"
 						gradientHoverStart="#0000ff"
 						gradientHoverEnd="#ff00ff">TEST</CustomGradientButton
 					>
-                    <GradientButton2 gradientStart="#ff0000" gradientEnd="#00ff00">TEST</GradientButton2>
+                    <!-- <GradientButton2 gradientStart="#ff0000" gradientEnd="#00ff00">TEST</GradientButton2> -->
+                    <GradientButton2
+                    gradientColors={[
+                      { color: 'var(--cyan-500)', stop: 0 },
+                      { color: '#ffffff', stop: 50 },
+                      { color: '#000000', stop: 70 },
+                      { color: '#0000ff', stop: 100 }
+                    ]}
+                    gradientHoverColors={[
+                      { color: '#0f69b4', stop: 0 },
+                      { color: '#ff69b4', stop: 50 },
+                      { color: '#7f69f4', stop: 100 }
+                    ]}
+                  >
+                    Click me!
+                  </GradientButton2>
 				</svelte:fragment>
 			</PricingItemWrapper>
 		</PricingCard>
