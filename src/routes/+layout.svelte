@@ -20,18 +20,23 @@
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import Nav from '$lib/components/Nav.svelte';
+	import { GridAndDotBackgroundsSmallGrid, GridAndDotBackgrounds, DotBackground } from '$lib/components/ui/GridAndDotBackground';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
 <section
-	class="flex flex-col w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
+class="flex flex-col w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
 >
-	<div class="bg-white/95 dark:bg-black/50 flex flex-col w-full h-full">
+<GridAndDotBackgrounds>
+	<!-- <DotBackground> -->
+	<div class="bg-white/95 dark:bg-black/20 flex flex-col w-full h-full">
 		<Nav />
 		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />
 		</div>
 	</div>
+<!-- </DotBackground> -->
+</GridAndDotBackgrounds>
 </section>
 
 <style>

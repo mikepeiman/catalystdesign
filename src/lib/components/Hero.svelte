@@ -3,7 +3,7 @@
 	import { IconArrowRight, IconCalendar } from '@tabler/icons-svelte';
     import { GridAndDotBackgroundsSmallGrid, GridAndDotBackgrounds, DotBackground } from './ui/GridAndDotBackground';
 </script>
-<GridAndDotBackgrounds>
+<!-- <DotBackground> -->
 
 <div class="hero-bg w-full h-full"></div>
 
@@ -39,7 +39,7 @@
 		>
 	</div>
 </div>
-</GridAndDotBackgrounds>
+<!-- </DotBackground> -->
 
 <style>
 	.hero-bg {

@@ -10,7 +10,7 @@
 	];
 </script>
 
-<div class="h-20 text-black dark:text-white flex justify-between relative font-inter">
+<div class="min-h-[6vh] text-black dark:text-white flex justify-between  font-inter bg-orange-500/15 sticky top-0 z-50 ">
 	<div class="flex items-center justify-center h-full mx-4 left-10">
 		<img src="/images/logo-blue.svg" alt="Logo" class="h-12 self-center" />
         <h3 class=" ml-3 text-lg font-bold">Catalyst</h3>
@@ -26,6 +26,6 @@
         </div>
         <div class="right flex h-full items-center mx-4">
             <DarkModeToggle />
-			<GradientButton href="/contact" color="greenToBlue" size="md" class="mr-4">Login</GradientButton>
+			<GradientButton href="https://catalyst.bloom.io/login" color="greenToBlue" size="md" class="mr-4">Login</GradientButton>
         </div>
 </div>
