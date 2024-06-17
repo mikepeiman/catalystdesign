@@ -5,7 +5,7 @@
      let gradientHoverEnd = '#c2410c'; // Default hover ending color (orange-700)
   </script>
   
-  <button class="gradient-button" style="--gradient-start: {gradientStart}; --gradient-end: {gradientEnd}; --gradient-hover-start: {gradientHoverStart}; --gradient-hover-end: {gradientHoverEnd};">
+  <button class="gradient-button rounded-md inline-flex items-center justify-center w-full h-12" style="--gradient-start: {gradientStart}; --gradient-end: {gradientEnd}; --gradient-hover-start: {gradientHoverStart}; --gradient-hover-end: {gradientHoverEnd};">
     <slot></slot>
   </button>
   
@@ -13,13 +13,8 @@
     .gradient-button {
       position: relative;
       display: inline-block;
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
       text-decoration: none;
       border: none;
-      border-radius: 4px;
       cursor: pointer;
       background-image: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
       transition: all 0.3s ease;

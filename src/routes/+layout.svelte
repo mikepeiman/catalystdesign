@@ -25,7 +25,7 @@
 </script>
 
 <section
-class="flex flex-col w-full h-full bg-gradient-to-br from-primary-600 to-secondary-800"
+class="flex flex-col w-full h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
 >
 <GridAndDotBackgrounds>
 	<!-- <DotBackground> -->
