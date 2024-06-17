@@ -25,11 +25,11 @@
 </script>
 
 <section
-class="flex flex-col w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
+class="flex flex-col w-full h-full bg-gradient-to-br from-primary-600 to-secondary-800"
 >
 <GridAndDotBackgrounds>
 	<!-- <DotBackground> -->
-	<div class="bg-white/95 dark:bg-black/20 flex flex-col w-full h-full">
+	<div class="bg-white/95 dark:bg-blue-700/20 flex flex-col w-full h-full">
 		<Nav />
 		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />

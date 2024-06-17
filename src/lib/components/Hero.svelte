@@ -5,9 +5,9 @@
 </script>
 <!-- <DotBackground> -->
 
-<div class="hero-bg w-full h-full"></div>
+<div class="hero-bg"></div>
 
-<div class="flex flex-col h-full w-full justify-center items-center font-display">
+<div class="flex flex-col h-screen w-full justify-center items-center font-display">
 	<h1
 		class="-mt-[20vh] mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
 	>
@@ -42,15 +42,22 @@
 <!-- </DotBackground> -->
 
 <style>
+:root {
+    --hero-watermark-width: 100vw;
+    --hero-watermark-height: 100vh;
+}
+
 	.hero-bg {
 		background-image: url('/images/logo.svg');
 		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		background-repeat: repeat;
+		/* background-size: cover; */
 		opacity: 0.1;
 		position: absolute;
 		top: 0;
 		left: 0;
-		/* min-height: 100vh; */
+        height: var(--hero-watermark-height);
+        width: var(--hero-watermark-width);
+
 	}
 </style>
