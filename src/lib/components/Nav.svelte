@@ -11,33 +11,35 @@
 
 	import { onMount } from 'svelte';
 
-let prevScrollpos = window.pageYOffset;
-let navbar;
+	let prevScrollpos;
+	let navbar;
 
-function handleScroll() {
-  const currentScrollPos = window.pageYOffset;
+	function handleScroll() {
+		const currentScrollPos = window.pageYOffset;
 
-  if (prevScrollpos > currentScrollPos) {
-	navbar.style.top = "0";  // Show the navbar
-  } else {
-	navbar.style.top = "-100px";  // Hide the navbar
-  }
+		if (prevScrollpos > currentScrollPos) {
+			navbar.style.top = '0'; // Show the navbar
+		} else {
+			navbar.style.top = '-100px'; // Hide the navbar
+		}
 
-  prevScrollpos = currentScrollPos;
-}
+		prevScrollpos = currentScrollPos;
+	}
 
-onMount(() => {
-  window.addEventListener("scroll", handleScroll);
+	onMount(() => {
+		prevScrollpos = window.pageYOffset;
+		// uncomment below to make navbar show/hide on scroll
+		// window.addEventListener('scroll', handleScroll);
 
-  return () => {
-	window.removeEventListener("scroll", handleScroll);
-  };
-});
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
 <nav
 	bind:this={navbar}
-	class="min-h-[var(--topnav-height)] text-black dark:text-white flex justify-between items-center font-inter bg-blue-900 sticky top-0 z-50 transition-all duration-300"
+	class="navbar min-h-[var(--topnav-height)] text-black dark:text-white flex justify-between items-center font-inter bg-[#050F28]/50 sticky top-0 z-50 transition-all duration-300"
 >
 	<div class="flex items-center justify-center h-full mx-4 left-10">
 		<img src="/images/logo-blue.svg" alt="Logo" class="h-12 self-center" />
@@ -66,5 +68,12 @@ onMount(() => {
 <style>
 	:root {
 		--topnav-height: 6vh;
+	}
+	.navbar {
+		box-shadow:
+			0 4px 10px rgba(255, 0, 0, 0.4),
+			0 0 15px rgba(0, 0, 255, 0.6);
+		backdrop-filter: blur(10px); /* Apply blur effect */
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	}
 </style>

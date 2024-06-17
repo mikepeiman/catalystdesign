@@ -50,7 +50,7 @@
 	.hero-bg {
 		background-image: url('/images/logo.svg');
 		background-position: center;
-		background-repeat: repeat;
+		background-repeat: no-repeat;
 		/* background-size: cover; */
 		opacity: 0.1;
 		position: absolute;
