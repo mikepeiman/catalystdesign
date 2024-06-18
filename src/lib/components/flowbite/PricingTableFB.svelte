@@ -7,7 +7,7 @@
 		PricingHead,
 		PricingItem
 	} from 'flowbite-svelte-blocks';
-	import GradientButton2 from '$lib/components/GradientButton2.svelte';
+	import GradientButton from '$lib/components/GradientButton.svelte';
 
 </script>
 
@@ -49,7 +49,7 @@
 				</PricingItem>
 
 				<svelte:fragment slot="btn">
-                    <GradientButton2
+                    <GradientButton
                     gradientAngle="110deg"
                     gradientAngleHover="110deg"
                     gradientColors={[
@@ -64,7 +64,7 @@
                     ]}
                   >
                     Get started
-                  </GradientButton2>
+                  </GradientButton>
 				</svelte:fragment>
 			</PricingItemWrapper>
 		</PricingCard>
@@ -98,7 +98,7 @@
 				</PricingItem>
 
 				<svelte:fragment slot="btn">
-                    <GradientButton2
+                    <GradientButton
                     gradientAngle="110deg"
                     gradientColors={[
                         { color: 'var(--green-400)', stop: 20 },
@@ -112,7 +112,7 @@
                       ]}
                   >
                     Get started
-                  </GradientButton2>
+                  </GradientButton>
 				</svelte:fragment>
 			</PricingItemWrapper>
 		</PricingCard>
@@ -146,7 +146,7 @@
 				</PricingItem>
 
 				<svelte:fragment slot="btn">
-                    <GradientButton2
+                    <GradientButton
                     gradientAngle="110deg"
                     gradientAngleHover="60deg"
                     gradientColors={[
@@ -161,7 +161,7 @@
                       ]}
                   >
                     Get started
-                  </GradientButton2>
+                  </GradientButton>
 				</svelte:fragment>
 			</PricingItemWrapper>
 		</PricingCard>
