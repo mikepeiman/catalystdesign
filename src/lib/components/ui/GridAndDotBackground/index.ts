@@ -1,5 +1,5 @@
-import GridAndDotBackgrounds from './GridAndDotBackgrounds.svelte';
-import GridAndDotBackgroundsSmallGrid from './GridAndDotBackgroundsSmallGrid.svelte';
+import GridBackground from './GridBackground.svelte';
+import SmallGridBackground from './SmallGridBackground.svelte';
 import DotBackground from './DotBackground.svelte';
 
-export { GridAndDotBackgrounds, GridAndDotBackgroundsSmallGrid, DotBackground };
+export { GridBackground, SmallGridBackground, DotBackground };

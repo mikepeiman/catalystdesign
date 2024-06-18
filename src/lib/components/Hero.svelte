@@ -1,7 +1,8 @@
 <script>
-	import { Button, GradientButton } from 'flowbite-svelte';
+	// import { Button, GradientButton } from 'flowbite-svelte';
+    import GradientButton from '$lib/components/GradientButton.svelte';
 	import { IconArrowRight, IconCalendar } from '@tabler/icons-svelte';
-    import { GridAndDotBackgroundsSmallGrid, GridAndDotBackgrounds, DotBackground } from './ui/GridAndDotBackground';
+    // import { SmallGridBackground, GridBackground, DotBackground } from './ui/GridAndDotBackground';
 </script>
 <!-- <DotBackground> -->
 
