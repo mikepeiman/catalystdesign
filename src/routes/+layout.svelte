@@ -25,7 +25,7 @@
 </script>
 
 <section
-class="flex flex-col w-full h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
+class="flex flex-col min-w-screen md:w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
 >
 <GridAndDotBackgrounds>
 	<!-- <DotBackground> -->
@@ -40,12 +40,16 @@ class="flex flex-col w-full h-screen bg-gradient-to-br from-primary-600 to-secon
 </section>
 
 <style>
+	:global(html) {
+		min-width: fit-content;
+	}
 	:global(body,
 	body *, nav, nav *) {
 		transition:
 			background-color 0.15s,
 			color 0.15s,
 			border-color 0.15s;
+			
 	}
 
 </style>

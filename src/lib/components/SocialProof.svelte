@@ -26,30 +26,45 @@
 	import { IconStar, IconStarFilled } from '@tabler/icons-svelte';
 </script>
 
+<div class="flex w-full items-center justify-center">
+  {#each Array(5).fill(0) as _}
+  <IconStarFilled class="w-12 h-12 mx-4 my-0 p-0 -mt-6 text-yellow-400 z-10" />
+  {/each}
+</div>
 <section
 	name="social"
-	class="bg-white dark:bg-gray-900 flex items-center  justify-center py-20 border-b-cyan-300 border-b-4"
+	class="bg-white dark:bg-gray-900 flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-cyan-300 border-b-4"
 >
-	<div class="max-w-screen-2xl flex">
-    {#each socialData as item}
-      <div class="mx-4 border-cyan-400/40 border-solid border-l flex">
-        <div
-          class="max-w-md mx-4 mb-4 bg-white dark:bg-gray-800 shadow-md rounded-md p-4 flex flex-col items-center"
-        >
-          <div class="flex justify-center mb-4 w-24 items-center">
-            <img src={item.avatar} alt={item.name} class="w-full h-full rounded-full" />
+	<div class="grid max-w-screen-md px-4 lg:max-w-screen-2xl lg:flex">
+		{#each socialData as item}
+			<div class="social-item mx-4 grid justify-start items-start">
+				<div class="flex flex-col items-center">
+					<div class="flex mb-4 w-24">
+						<img src={item.avatar} alt={item.name} class="w-full h-full rounded-full" />
+					</div>
+          <h3 class="text-lg font-bold">{item.name}</h3>
+          <div class="flex justify-center mb-4">
+            {#each Array(item.stars).fill(0) as _}
+              <IconStarFilled class="text-2xl text-yellow-400" />
+            {/each}
           </div>
-          <div class="flex flex-col items-center">
-            <h3 class="text-lg font-bold text-white">{item.name}</h3>
-            <div class="flex justify-center mb-4">
-              {#each Array(item.stars).fill(0) as _}
-                <IconStarFilled class="text-2xl text-yellow-400" />
-              {/each}
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-600 dark:text-gray-400">{item.description}</p>
-      </div>
-    {/each}
-  </div>
+					<div
+						class="max-w-md mx-4 mb-4 bg-white dark:bg-gray-800 shadow-md rounded-md p-4 flex items-center"
+					>
+						<p class="text-gray-600 dark:text-gray-400">{item.description}</p>
+					</div>
+				</div>
+			</div>
+		{/each}
+	</div>
 </section>
+
+<style>
+	.social-item {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+</style>

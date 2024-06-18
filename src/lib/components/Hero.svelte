@@ -44,7 +44,7 @@
 <style>
 :root {
     --hero-watermark-width: 100vw;
-    --hero-watermark-height: 100vh;
+    --hero-watermark-height: 90vh;
 }
 
 	.hero-bg {
@@ -63,6 +63,6 @@
 	}
 
     .hero-main {
-        max-height: calc(100vh - var(--topnav-height));
+        max-height: calc(90vh - var(--topnav-height));
     }
 </style>
