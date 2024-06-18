@@ -48,7 +48,7 @@
 	<div class=" flex justify-around items-center">
 		<ul class="flex justify items-center">
 			{#each items as item}
-				<li class="px-4 py-2 text-md font-medium transition duration-150">
+				<li class="px-4 py-2 text-md font-medium">
 					<a href={item.url} class=" hover:text-gray-300">{item.name}</a>
 				</li>
 			{/each}
@@ -83,5 +83,6 @@
 			0 0 15px rgba(0, 0, 255, 0.6);
 		backdrop-filter: blur(10px); /* Apply blur effect */
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		transition-duration: 0;
 	}
 </style>

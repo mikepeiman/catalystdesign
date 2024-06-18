@@ -15,7 +15,7 @@
 	export let hoverScale = 1.025; // Default hover scale (1.05)
 	let gradientCss = `linear-gradient(${gradientAngle}, ${gradientColors.map((c) => `${c.color} ${c.stop}%`).join(', ')})`;
 	let gradientHoverCss = `linear-gradient(${gradientAngleHover}, ${gradientHoverColors.map((c) => `${c.color} ${c.stop}%`).join(', ')})`;
-	let buttonClass = twMerge('gradient-button rounded-md inline-flex items-center justify-center w-full h-12', $$props.class);
+	let buttonClass = twMerge('gradient-button rounded-md inline-flex items-center justify-center w-full h-12 text-white dark:text-white', $$props.class);
 </script>
 
 <button

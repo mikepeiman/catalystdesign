@@ -74,14 +74,14 @@
 
 <section class="relative py-6 sm:py-10">
 	<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-		<div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+		<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-12">
 			<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
 				Designed for busy business owners
 			</h2>
-			<p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-				Here at Catalyst Design, we are committed to making our customers' lives easier. <br><br>
+			<p class="my-8 w-full font-light text-gray-500 sm:text-xl dark:text-gray-400 text-center">
+				At Catalyst Design, we are committed to making our customers' lives easier.<br>
                 Our process is simple and efficient, and our pricing plans are designed to meet the needs of all business owners.
-                <br><br>
+                <br>
                 We can handle any design & development, marketing, or business process project you need, regardless of size.
             
 			</p>
@@ -94,7 +94,7 @@
                         card.cardClasses
                     )}
                      >
-						<div class=' text-white flex flex-col items-center m-0 p-0'
+						<div class='text-black dark:text-white flex flex-col items-center m-0 p-0'
 						>
 							<h3 class="text-2xl font-semibold self-center mb-6">{card.title}</h3>
 							<p class="self-center mb-6 text-slate-400 text-lg font-light">{card.description}</p>
@@ -102,7 +102,7 @@
 							<ul class="flex flex-col items-start justify-start self-start">
 								{#each card.items as item}
 									<div class="flex">
-										<li class="flex text-white text-md my-2">
+										<li class="flex text-black dark:text-white text-md my-2">
 											<IconCircleCheckFilled
 												class="text-green-500 dark:text-green-400 mx-2 w-5 h-5"
 											/>{item}

@@ -7,7 +7,7 @@
 
 <div class="hero-bg"></div>
 
-<div class="flex flex-col h-screen w-full justify-center items-center font-display">
+<div class="hero-main flex flex-col h-screen w-full justify-center items-center font-display">
 	<h1
 		class="-mt-[20vh] mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
 	>
@@ -51,13 +51,18 @@
 		background-image: url('/images/logo.svg');
 		background-position: center;
 		background-repeat: no-repeat;
-		/* background-size: cover; */
+		background-size: cover;
 		opacity: 0.1;
 		position: absolute;
-		top: 0;
+		top: -6vh;
 		left: 0;
         height: var(--hero-watermark-height);
         width: var(--hero-watermark-width);
+        border-bottom: 4px solid var(--cyan-300);
 
 	}
+
+    .hero-main {
+        max-height: calc(100vh - var(--topnav-height));
+    }
 </style>
