@@ -7,9 +7,6 @@
 		PricingHead,
 		PricingItem
 	} from 'flowbite-svelte-blocks';
-	import { Button } from 'flowbite-svelte';
-	import { GradientButton } from 'flowbite-svelte';
-	import CustomGradientButton from '$lib/components/CustomGradientButton.svelte';
 	import GradientButton2 from '$lib/components/GradientButton2.svelte';
 
 </script>
@@ -56,13 +53,13 @@
                     gradientAngle="110deg"
                     gradientAngleHover="110deg"
                     gradientColors={[
-                      { color: 'var(--cyan-600)', stop: 0 },
-                      { color: 'var(--purple-800)', stop: 50 },
+                      { color: 'var(--cyan-600)', stop: 20 },
+                      { color: 'var(--purple-800)', stop: 20 },
                       { color: 'var(--blue-700)', stop: 100 }
                     ]}
                     gradientHoverColors={[
-                      { color: 'var(--cyan-500)', stop: 0 },
-                      { color: 'var(--purple-600)', stop: 50 },
+                      { color: 'var(--cyan-600)', stop: 0 },
+
                       { color: 'var(--blue-600)', stop: 100 }
                     ]}
                   >
@@ -72,7 +69,7 @@
 			</PricingItemWrapper>
 		</PricingCard>
 
-		<PricingCard>
+		<PricingCard class="transform scale-105">
 			<PricingBodyHead>
 				<svelte:fragment slot="h3">Full Site+</svelte:fragment>
 				<svelte:fragment slot="paragraph"
@@ -102,9 +99,17 @@
 
 				<svelte:fragment slot="btn">
                     <GradientButton2
-                    gradientAngle="-60deg"
-                    gradientAngleHover="60deg"
+                    gradientAngle="110deg"
+                    gradientColors={[
+                        { color: 'var(--green-400)', stop: 20 },
+                        { color: 'var(--purple-800)', stop: 20 },
+                        { color: 'var(--blue-700)', stop: 100 }
+                      ]}
+                      gradientHoverColors={[
+                        { color: 'var(--green-400)', stop: 0 },
 
+                        { color: 'var(--green-600)', stop: 100 }
+                      ]}
                   >
                     Get started
                   </GradientButton2>
@@ -112,7 +117,7 @@
 			</PricingItemWrapper>
 		</PricingCard>
 
-		<PricingCard>
+		<PricingCard >
 			<PricingBodyHead>
 				<svelte:fragment slot="h3">Large Projects</svelte:fragment>
 				<svelte:fragment slot="paragraph"
@@ -142,8 +147,18 @@
 
 				<svelte:fragment slot="btn">
                     <GradientButton2
-                    gradientAngle="-60deg"
+                    gradientAngle="110deg"
                     gradientAngleHover="60deg"
+                    gradientColors={[
+                        { color: 'var(--cyan-600)', stop: 20 },
+                        { color: 'var(--purple-800)', stop: 20 },
+                        { color: 'var(--blue-700)', stop: 100 }
+                      ]}
+                      gradientHoverColors={[
+                        { color: 'var(--cyan-600)', stop: 0 },
+    
+                        { color: 'var(--blue-600)', stop: 100 }
+                      ]}
                   >
                     Get started
                   </GradientButton2>
