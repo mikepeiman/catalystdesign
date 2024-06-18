@@ -41,10 +41,11 @@ class="flex flex-col w-full h-screen bg-gradient-to-br from-primary-600 to-secon
 
 <style>
 	:global(body,
-	body *) {
+	body *, nav, nav *) {
 		transition:
 			background-color 0.15s,
 			color 0.15s,
 			border-color 0.15s;
 	}
+
 </style>
