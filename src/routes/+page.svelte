@@ -10,7 +10,6 @@
 	<Hero />
 	<SocialProof />
 	<PricingTable />
-	<PricingTableFB />
 	<BlogSection />
 </section>
 
