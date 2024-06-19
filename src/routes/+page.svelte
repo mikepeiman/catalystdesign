@@ -6,7 +6,7 @@
 	import BlogSection from '$lib/components/flowbite/BlogSection.svelte';
 </script>
 
-<section class="w-full h-full relative">
+<section name="homepage" class="w-full h-full">
 	<Hero />
 	<SocialProof />
 	<PricingTable />

@@ -25,8 +25,8 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<section
-class="flex flex-col min-w-screen w-fit lg:w-screen h-screen  bg-black/50"
+<section name="layout-main"
+class="relative flex flex-col min-w-screen w-fit lg:w-screen h-screen  bg-black/50"
 >
 <!-- <GridBackground> -->
 	<div class="bg-white/95 dark:bg-blue-700/20 flex flex-col w-full h-full">
