@@ -9,60 +9,56 @@
 
 <div class="hero-bg"></div>
 
-<div class="hero-main flex flex-col h-screen w-full justify-center items-center font-display">
-	<h1
-		class="-mt-[20vh] mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
-	>
-		You need a website?
-	</h1>
-	<h1
-		class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
-	>
-		We build websites.
-	</h1>
-	<h1
-		class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
-	>
-		Let's talk.
-	</h1>
+<div class="hero-main flex flex-col h-screen w-full justify-center items-center">
+	<div class="w-fit flex flex-col h-screen justify-center items-center font-display">
+		<div
+			class="text-4xl sm:text-5xl -mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
+		>
+			<h1 class=" mb-4">You need a website?</h1>
+			<h1 class="mb-4">We build websites.</h1>
+			<h1 class="mb-4">Let's talk.</h1>
+		</div>
 
-	<div class="subtext text-black dark:text-white font-inter flex flex-col items-center justify-center text-xl text-center mt-8 w-3/4">
-		<p>You've got enough to do. Let us handle this part.</p>
-		<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>
+		<div
+			class="subtext text-black dark:text-white font-inter flex flex-col items-center justify-center text-base md:text-xl text-center mt-8 w-full"
+		>
+			<p>You've got enough to do. Let us handle this part.</p>
+			<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>
 
-	<div class="cta-section text-base flex my-8 w-3/4 ">
-        <GradientButton
-        class="m-6 "
-        gradientAngle="110deg"
-        gradientColors={[
-            { color: 'var(--green-600)', stop: 20 },
-            { color: 'var(--cyan-800)', stop: 20 },
-            { color: 'var(--blue-700)', stop: 100 }
-        ]}
-        gradientHoverColors={[
-            { color: 'var(--green-600)', stop: 0 },
-            { color: 'var(--cyan-600)', stop: 100 }
-        ]}
-    >
-        Get a Quick Quote
-    </GradientButton>
-    <GradientButton
-    class="mt-6 "
-    gradientAngle="110deg"
-    gradientColors={[
-        { color: 'var(--slate-600)', stop: 20 },
-        { color: 'var(--zinc-800)', stop: 20 },
-        { color: 'var(--blue-700)', stop: 100 }
-    ]}
-    gradientHoverColors={[
-        { color: 'var(--zinc-600)', stop: 0 },
-        { color: 'var(--blue-600)', stop: 100 }
-    ]}
->
-    See Our Process
-</GradientButton>
+			<div class="cta-section text-base flex my-8 w-full">
+				<GradientButton
+					class="mr-6 "
+					gradientAngle="110deg"
+					gradientColors={[
+						{ color: 'var(--green-600)', stop: 20 },
+						{ color: 'var(--cyan-800)', stop: 20 },
+						{ color: 'var(--blue-700)', stop: 100 }
+					]}
+					gradientHoverColors={[
+						{ color: 'var(--green-600)', stop: 0 },
+						{ color: 'var(--cyan-600)', stop: 100 }
+					]}
+				>
+					Get a Quick Quote
+				</GradientButton>
+				<GradientButton
+					class=" "
+					gradientAngle="110deg"
+					gradientColors={[
+						{ color: 'var(--slate-600)', stop: 20 },
+						{ color: 'var(--zinc-800)', stop: 20 },
+						{ color: 'var(--blue-700)', stop: 100 }
+					]}
+					gradientHoverColors={[
+						{ color: 'var(--zinc-600)', stop: 0 },
+						{ color: 'var(--blue-600)', stop: 100 }
+					]}
+				>
+					See Our Process
+				</GradientButton>
+			</div>
+		</div>
 	</div>
-</div>
 </div>
 
 <!-- </DotBackground> -->
@@ -74,7 +70,7 @@
 	}
 
 	.hero-bg {
-		background-image:  url('/images/logo-blue.svg');
+		background-image: url('/images/logo-blue.svg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
