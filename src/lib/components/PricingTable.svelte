@@ -72,7 +72,7 @@
 	];
 </script>
 
-<section name="pricing-table" class="relative py-[12%] ">
+<section name="pricing-table" class="relative py-[12%]">
 	<div class="pricing-bg"></div>
 	<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-12">
 		<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">

@@ -9,8 +9,8 @@
 
 <div class="hero-bg"></div>
 
-<div class="hero-main flex flex-col h-screen w-full justify-center items-center">
-	<div class="w-fit flex flex-col h-screen justify-center items-center font-display">
+<div class="hero-main flex flex-col w-full justify-center items-center">
+	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
 			class="text-4xl sm:text-5xl -mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
 		>
@@ -67,6 +67,7 @@
 	:root {
 		--hero-watermark-width: 100vw;
 		--hero-watermark-height: 90vh;
+        --hero-main-height: 84vh;
 	}
 
 	.hero-bg {
@@ -78,12 +79,12 @@
 		position: absolute;
 		top: -6vh;
 		left: 0;
-		height: var(--hero-watermark-height);
+		height: calc(var(--hero-main-height) + var(--topnav-height)*2);
 		width: var(--hero-watermark-width);
 		border-bottom: 4px solid var(--cyan-300);
 	}
 
 	.hero-main {
-		max-height: calc(90vh - var(--topnav-height));
+		height: var(--hero-main-height);
 	}
 </style>
