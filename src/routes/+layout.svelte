@@ -26,9 +26,9 @@
 </script>
 
 <section
-class="flex flex-col min-w-screen w-fit lg:w-screen h-screen bg-gradient-to-br from-primary-600 to-secondary-800"
+class="flex flex-col min-w-screen w-fit lg:w-screen h-screen  bg-black/50"
 >
-<GridBackground>
+<!-- <GridBackground> -->
 	<div class="bg-white/95 dark:bg-blue-700/20 flex flex-col w-full h-full">
 		<!-- <Nav /> -->
 		<NavMobile />
@@ -36,7 +36,7 @@ class="flex flex-col min-w-screen w-fit lg:w-screen h-screen bg-gradient-to-br f
 			<slot />
 		</div>
 	</div>
-</GridBackground>
+<!-- </GridBackground> -->
 </section>
 
 <style>
@@ -52,5 +52,6 @@ class="flex flex-col min-w-screen w-fit lg:w-screen h-screen bg-gradient-to-br f
 			border-color 0.15s;
 			
 	}
+
 
 </style>

@@ -26,25 +26,24 @@
 	class={buttonClass}
 	style={`--hover-scale: ${hoverScale}; --gradient-css: ${gradientCss}; --gradient-hover-css: ${gradientHoverCss};`}
 >
-	<div class="flex">
-		<slot></slot>
-	</div>
+	<slot></slot>
 </button>
 
 <style>
 	.gradient-button {
 		position: relative;
-		display: inline-block;
+		display: flex;
 		text-decoration: none;
 		border: none;
 		cursor: pointer;
 		background-image: var(--gradient-css);
 		transition: all 0.3s ease;
 		z-index: 1;
+		text-wrap: none;
 	}
 	.gradient-button:hover {
 		position: relative;
-		display: inline-block;
+		display: flex;
 		text-decoration: none;
 		border: none;
 		cursor: pointer;

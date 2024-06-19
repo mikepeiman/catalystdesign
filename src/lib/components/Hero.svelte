@@ -1,9 +1,10 @@
 <script>
 	// import { Button, GradientButton } from 'flowbite-svelte';
-    import GradientButton from '$lib/components/GradientButton.svelte';
+	import GradientButton from '$lib/components/GradientButton.svelte';
 	import { IconArrowRight, IconCalendar } from '@tabler/icons-svelte';
-    // import { SmallGridBackground, GridBackground, DotBackground } from './ui/GridAndDotBackground';
+	// import { SmallGridBackground, GridBackground, DotBackground } from './ui/GridAndDotBackground';
 </script>
+
 <!-- <DotBackground> -->
 
 <div class="hero-bg"></div>
@@ -25,31 +26,55 @@
 		Let's talk.
 	</h1>
 
-	<div class="subtext text-black dark:text-white font-inter text-xl text-center mt-8 w-3/4">
-		<p>
-			You've got enough to do. Let us handle this part.
-		</p>
+	<div class="subtext text-black dark:text-white font-inter flex flex-col items-center justify-center text-xl text-center mt-8 w-3/4">
+		<p>You've got enough to do. Let us handle this part.</p>
 		<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>
-	</div>
-	<div class="cta-section my-8">
-		<GradientButton href="/contact" color="greenToBlue" size="lg" class="mr-4"
-			>Get a Quick Quote <IconArrowRight class="ml-2" /></GradientButton
-		>
-		<GradientButton href="/contact" color="purpleToPink" size="lg"
-			>Book a Call <IconCalendar class="ml-2" /></GradientButton
-		>
+
+	<div class="cta-section text-base flex my-8 w-3/4 ">
+        <GradientButton
+        class="m-6 "
+        gradientAngle="110deg"
+        gradientColors={[
+            { color: 'var(--green-600)', stop: 20 },
+            { color: 'var(--cyan-800)', stop: 20 },
+            { color: 'var(--blue-700)', stop: 100 }
+        ]}
+        gradientHoverColors={[
+            { color: 'var(--green-600)', stop: 0 },
+            { color: 'var(--cyan-600)', stop: 100 }
+        ]}
+    >
+        Get a Quick Quote
+    </GradientButton>
+    <GradientButton
+    class="mt-6 "
+    gradientAngle="110deg"
+    gradientColors={[
+        { color: 'var(--slate-600)', stop: 20 },
+        { color: 'var(--zinc-800)', stop: 20 },
+        { color: 'var(--blue-700)', stop: 100 }
+    ]}
+    gradientHoverColors={[
+        { color: 'var(--zinc-600)', stop: 0 },
+        { color: 'var(--blue-600)', stop: 100 }
+    ]}
+>
+    See Our Process
+</GradientButton>
 	</div>
 </div>
+</div>
+
 <!-- </DotBackground> -->
 
 <style>
-:root {
-    --hero-watermark-width: 100vw;
-    --hero-watermark-height: 90vh;
-}
+	:root {
+		--hero-watermark-width: 100vw;
+		--hero-watermark-height: 90vh;
+	}
 
 	.hero-bg {
-		background-image: url('/images/logo.svg');
+		background-image:  url('/images/logo-blue.svg');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -57,13 +82,12 @@
 		position: absolute;
 		top: -6vh;
 		left: 0;
-        height: var(--hero-watermark-height);
-        width: var(--hero-watermark-width);
-        border-bottom: 4px solid var(--cyan-300);
-
+		height: var(--hero-watermark-height);
+		width: var(--hero-watermark-width);
+		border-bottom: 4px solid var(--cyan-300);
 	}
 
-    .hero-main {
-        max-height: calc(90vh - var(--topnav-height));
-    }
+	.hero-main {
+		max-height: calc(90vh - var(--topnav-height));
+	}
 </style>
