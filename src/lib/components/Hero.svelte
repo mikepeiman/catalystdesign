@@ -31,7 +31,7 @@
 					gradientAngle="110deg"
 					gradientColors={[
 						{ color: 'var(--green-600)', stop: 20 },
-						{ color: 'var(--cyan-800)', stop: 20 },
+						{ color: 'var(--zinc-800)', stop: 20 },
 						{ color: 'var(--blue-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
