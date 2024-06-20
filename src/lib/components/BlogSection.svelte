@@ -1,5 +1,5 @@
 <script>
-    import { IconChevronRight } from '@tabler/icons-svelte';
+    import { IconChevronRight, IconFileReport, IconFileText, IconSchool, IconVideo } from '@tabler/icons-svelte';
   
     const posts = [
       {
@@ -9,7 +9,10 @@
         author: {
           name: "Emma Wilson",
           img: "images/avatars/avatar-8.jpg"  
-        }
+        },
+        tags: ["web design", "web development"],
+        type: "case study",
+        icon: IconFileText
       },
   
       {
@@ -19,7 +22,10 @@
         author: {
           name: "Jack Peterson", 
           img: "images/avatars/avatar-8.jpg"
-        }  
+        },
+        tags: ["web design", "web development"],
+        type: "tutorial",
+        icon: IconVideo
       },
   
       {
@@ -29,7 +35,10 @@
         author: {
           name: "Liza Moore",
           img: "images/avatars/avatar-8.jpg"
-        }
+        },
+        tags: ["web design", "web development"],
+        type: "article",
+        icon: IconFileReport
       }
     ]
   </script>
@@ -43,8 +52,24 @@
   
         {#each posts as post}
   
-          <article class="bg-white p-6 rounded-lg shadow">
+          <article class="bg-zinc-600 text-white p-6 rounded-lg shadow">
   
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <svelte:component this={post.icon} class="w-6 h-6 text-blue-500 " />
+                <p class="ml-2 text-sm font-medium text-gray-900">
+                  {post.type}
+                </p>
+              </div>
+  
+              <div class="flex items-center">
+                {#each post.tags as tag}
+                  <p class="text-sm font-medium text-gray-900">
+                    {tag}
+                  </p>
+                {/each}
+              </div>
+            </div>
             <header>
               <h3 class="text-lg font-medium text-gray-900">
                 {post.title}
