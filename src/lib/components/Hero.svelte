@@ -7,7 +7,7 @@
 
 <!-- <DotBackground> -->
 
-<div class="hero-bg"></div>
+<div class="section-bg"></div>
 
 <div class="hero-main flex flex-col w-full justify-center items-center">
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
@@ -70,7 +70,7 @@
         --hero-main-height: 84vh;
 	}
 
-	.hero-bg {
+	.section-bg {
 		background-image: url('/images/logo-blue.svg');
 		background-position: center;
 		background-repeat: no-repeat;
