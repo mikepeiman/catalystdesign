@@ -139,7 +139,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: var(--hero-watermark-height);
+		height: 100%;
 		width: 100vw;
 		border-bottom: 4px solid var(--cyan-300);
         padding: 0;

@@ -10,8 +10,8 @@
 <section name="homepage" class="w-full h-full">
 	<Hero />
 	<SocialProof />
-	<PricingTable />
 	<BlogSection />
+	<PricingTable />
 </section>
 
 <style>
