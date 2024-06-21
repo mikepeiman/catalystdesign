@@ -42,14 +42,14 @@
       }
     ]
   </script>
-  <section class="bg-white relative h-full">
+  <section name="blog-posts" class="bg-white dark:bg-zinc-700 text-black dark:text-white relative h-full">
       <div class="section-bg"></div>
 
     <div class="max-w-7xl mx-auto px-4 pt-16 pb-20">
   
       <div class="flex flex-col text-center mb-12 mt-24">
-          <h2 class="text-3xl font-bold mb-2 font-extrabold text-center ">Latest Blog Posts</h2>
-          <p>Our team of designers and developers worked together to create a website that reflects our brand values.</p>
+          <h2 class="text-4xl font-bold mb-4 font-extrabold text-center ">Latest Blog Posts</h2>
+          <p class="text-xl font-thin">Our team of designers and developers worked together to create a website that reflects our brand values.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   
@@ -133,8 +133,10 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		height: calc(var(--hero-main-height) + var(--topnav-height)*2);
-		width: var(--hero-watermark-width);
+		/* height: calc(var(--hero-main-height) + var(--topnav-height)*2); */
+		height: 100%;
+		/* width: var(--hero-watermark-width); */
+		width: 100vw;
 		border-bottom: 4px solid var(--cyan-300);
 	}
   </style>

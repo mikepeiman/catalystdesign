@@ -88,7 +88,7 @@
 		</p>
 	</div>
 	<div class="flex w-full justify-center items-center">
-        <div class="space-y-8 w-full lg:w-3/4 2xl:w-1/2 mx-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 s-_fJE4A76f_0B">
+        <div class="space-y-8 w-full lg:w-3/4 3xl:w-1/2 mx-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 s-_fJE4A76f_0B">
             <!-- <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0 flex"> -->
             {#each pricingCards as card}
                 <div

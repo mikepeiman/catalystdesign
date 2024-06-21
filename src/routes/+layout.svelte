@@ -21,12 +21,13 @@
 	import { storePopup } from '@skeletonlabs/skeleton';
 	import Nav from '$lib/components/Nav.svelte';
 	import NavMobile from '$lib/components/NavMobile.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import { SmallGridBackground, GridBackground, DotBackground } from '$lib/components/ui/GridAndDotBackground';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
 <section name="layout-main"
-class="relative flex flex-col min-w-screen w-fit lg:w-screen h-screen  bg-black/50"
+class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  bg-black/50"
 >
 <!-- <GridBackground> -->
 	<div class="bg-white/95 dark:bg-blue-700/20 flex flex-col w-full h-full">
@@ -35,6 +36,7 @@ class="relative flex flex-col min-w-screen w-fit lg:w-screen h-screen  bg-black/
 		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />
 		</div>
+		<Footer />
 	</div>
 <!-- </GridBackground> -->
 </section>
