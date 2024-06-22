@@ -48,12 +48,12 @@ class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  "
 		/* min-width: fit-content; */
 		overflow-x: hidden;
 	}
-	:global(body,
+	/* :global(body,
 	body *, nav, nav *) {
 		transition: all 0.15s ease-in-out ;
 		transition-delay: 0s;
 		
-	}
+	} */
 
 
 </style>
