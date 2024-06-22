@@ -42,12 +42,12 @@
       }
     ]
   </script>
-  <section name="blog-posts" class="bg-white dark:bg-zinc-900 text-black dark:text-white relative h-full border-cyan-300/20 border-b-[1px]">
+  <section name="blog-posts" class="bg-white/75 dark:bg-black/75 bg-grid-white/10 text-black dark:text-white relative h-full border-cyan-300/20 border-b-[1px] py-24">
       <!-- <div class="section-bg"></div> -->
 
     <div class="max-w-7xl mx-auto px-4 pt-16 pb-20">
   
-      <div class="flex flex-col text-center mb-12 mt-24">
+      <div class="flex flex-col text-center mb-12">
           <h2 class="text-4xl font-bold mb-4 font-extrabold text-center ">Latest Blog Posts</h2>
           <p class="text-xl font-thin">Our team of designers and developers worked together to create a website that reflects our brand values.</p>
       </div>
@@ -55,10 +55,10 @@
   
         {#each posts as post}
   
-          <article class="bg-zinc-600 text-white p-6 rounded-lg shadow">
+          <article class="bg-white/75 dark:bg-black/75 text-black dark:text-white  p-6 rounded-lg shadow-lg border-[1px] border-white/50 dark:shadow-white/40 dark:hover:shadow-white/80 hover:scale-105 transition-all hover:cursor-pointer">
   
             <div class="flex items-center justify-between p-0 mb-4">
-              <div class="flex items-center text-zinc-300  bg-zinc-800 rounded-lg p-1 pr-2 mx-1 text-nowrap ">
+              <div class="flex items-center text-zinc-300  rounded-lg p-1 pr-2 mx-1 text-nowrap ">
                 <svelte:component this={post.icon} class="w-6 h-6 text-blue-500 " />
                 <p class="ml-2 text-sm font-medium  ">
                   {post.type}
