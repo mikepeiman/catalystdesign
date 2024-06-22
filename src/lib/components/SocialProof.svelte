@@ -59,9 +59,9 @@
 							{/each}
 						</div>
 						<div
-							class="max-w-md mx-4 mb-4 bg-white dark:bg-gray-800 shadow-md rounded-md p-4 flex items-center"
+							class="max-w-md mx-4 mb-4 bg-white/80 dark:bg-black/40 shadow-md rounded-md p-4 flex items-center"
 						>
-							<p class="text-gray-600 dark:text-gray-400">{item.description}</p>
+							<p class="text-black dark:text-gray-200">{item.description}</p>
 						</div>
 					</div>
 				</div>
