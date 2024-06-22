@@ -11,7 +11,7 @@ import svgToDataUri from 'mini-svg-data-uri';
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}'), './node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}', './node_modules/flowbite-svelte-blocks/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')], 
 	theme: {
 		extend: {
 			fontFamily: {
@@ -71,8 +71,6 @@ export default {
 				],
 			},
 		}),
-		require('flowbite/plugin'), 
-		require('flowbite-typography'),
 		aspectRatio,
 		addVariablesForColors,
 		function ({ matchUtilities, theme }: any) {

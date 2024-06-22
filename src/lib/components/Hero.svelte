@@ -81,7 +81,7 @@
 		left: 0;
 		height: calc(var(--hero-main-height) + var(--topnav-height)*2);
 		width: var(--hero-watermark-width);
-		border-bottom: 4px solid var(--cyan-300);
+
 	}
 
 	.hero-main {
