@@ -9,7 +9,7 @@
 
 <div class="section-bg"></div>
 
-<section name="hero" class="hero-main flex flex-col w-full justify-center items-center  border-b-cyan-300/20 border-b-[1px]">
+<section name="hero" class="hero-main flex flex-col w-full justify-center items-center bg-white/95 dark:bg-blue-700/20   border-b-cyan-300/20 border-b-[1px]">
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
 			class="text-4xl sm:text-5xl -mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
@@ -87,4 +87,6 @@
 	.hero-main {
 		height: var(--hero-main-height);
 	}
+
+	
 </style>

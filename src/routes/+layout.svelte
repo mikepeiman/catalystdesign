@@ -27,12 +27,14 @@
 </script>
 
 <section name="layout-main"
-class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  bg-black"
+class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  "
 >
-<!-- <GridBackground> -->
-	<div class="bg-white/95 dark:bg-blue-700/20 flex flex-col w-full h-full">
+<!-- <GridBackground opacityDark={50} opacityLight={50}> -->
+	<div class="flex flex-col w-full h-full z-10">
 		<!-- <Nav /> -->
-		<NavMobile />
+
+			<NavMobile />
+
 		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />
 		</div>
@@ -48,11 +50,9 @@ class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  bg-bl
 	}
 	:global(body,
 	body *, nav, nav *) {
-		transition:
-			background-color 0.15s,
-			color 0.15s,
-			border-color 0.15s;
-			
+		transition: all 0.15s ease-in-out ;
+		transition-delay: 0s;
+		
 	}
 
 

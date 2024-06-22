@@ -72,7 +72,7 @@
 	];
 </script>
 
-<section name="pricing-table" class="relative py-[12%]">
+<section name="pricing-table" class="relative py-[12%] border-cyan-300/20 border-b-[1px]">
 	<div class="pricing-bg"></div>
 	<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-12">
 		<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
@@ -141,7 +141,6 @@
 		left: 0;
 		height: 100%;
 		width: 100vw;
-		border-bottom: 4px solid var(--cyan-300);
         padding: 0;
         margin: 0;
 	}

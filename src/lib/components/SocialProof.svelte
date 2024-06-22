@@ -24,8 +24,10 @@
 	];
 
 	import { IconStar, IconStarFilled } from '@tabler/icons-svelte';
+	import { SmallGridBackground, GridBackground, DotBackground } from '$lib/components/ui/GridAndDotBackground';
 </script>
 
+<!-- <GridBackground opacityDark={0.85} opacityLight={0.5}> -->
 <div class="flex w-full items-center justify-center">
   {#each Array(5).fill(0) as _}
   <IconStarFilled class="w-12 h-12 mx-4 my-0 p-0 -mt-6 text-yellow-400 z-10" />
@@ -33,11 +35,11 @@
 </div>
 <section
 	name="social"
-	class="bg-white dark:bg-gray-900 flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-cyan-300/20 border-b-[1px]"
+	class="  dark:bg-black/40  bg-blue-700/20 w-full flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-cyan-300/20 border-b-[1px]"
 >
 	<div class="grid max-w-screen-md w-full lg:w-3/4 2xl:w-1/2  px-4 lg:max-w-screen-2xl lg:flex">
 		{#each socialData as item}
-			<div class="social-item mx-0 xl:mx-2 2xl:mx-4 grid justify-start items-start">
+			<div class="social-item z-10 mx-0 xl:mx-2 2xl:mx-4 grid justify-start items-start">
 				<div class="flex flex-col items-center">
 					<div class="flex mb-4 w-24">
 						<img src={item.avatar} alt={item.name} class="w-full h-full rounded-full" />
@@ -58,7 +60,7 @@
 		{/each}
 	</div>
 </section>
-
+<!-- </GridBackground> -->
 <style>
 	.social-item {
 		display: grid;

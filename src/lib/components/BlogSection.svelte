@@ -42,7 +42,7 @@
       }
     ]
   </script>
-  <section name="blog-posts" class="bg-white dark:bg-zinc-900 text-black dark:text-white relative h-full">
+  <section name="blog-posts" class="bg-white dark:bg-zinc-900 text-black dark:text-white relative h-full border-cyan-300/20 border-b-[1px]">
       <!-- <div class="section-bg"></div> -->
 
     <div class="max-w-7xl mx-auto px-4 pt-16 pb-20">

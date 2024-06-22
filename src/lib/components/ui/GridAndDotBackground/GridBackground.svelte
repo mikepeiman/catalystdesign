@@ -1,9 +1,11 @@
 <script lang="ts">
 	export let showFade: boolean = true;
+	export let opacityDark: number = 75;
+	export let opacityLight: number = 15;
 </script>
 
 <div
-	class="relative flex w-full h-full items-center justify-center bg-white bg-grid-black/[0.05] dark:bg-black dark:bg-grid-white/[0.15]"
+	class="relative flex flex-col w-full h-full items-center justify-center bg-white bg-grid-black/[{opacityLight}] dark:bg-black dark:bg-grid-cyan-300/20"
 >
 	<!-- Radial gradient for the container to give a faded look -->
 	{#if showFade}
