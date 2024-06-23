@@ -22,6 +22,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import NavMobile from '$lib/components/NavMobile.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import MambaFooter from '$lib/components/MambaFooter.svelte';
 	import {
 		SmallGridBackground,
 		GridBackground,
@@ -50,6 +51,8 @@
 			<slot />
 		</div>
 		<Footer />
+
+		<MambaFooter />
 	</div>
 	<!-- </GridBackground> -->
 </section>
