@@ -6,10 +6,15 @@
 </script>
 
 <!-- <DotBackground> -->
-
+<!-- TODO add icons to buttons -->
+<!-- TODO unify color scheme across hero and site (bg gradient, buttons, nav) -->
+<!-- TODO add shadow to H1 -->
 <div class="section-bg"></div>
 
-<section name="hero" class="hero-main flex flex-col w-full justify-center items-center bg-white/95 dark:bg-blue-700/20   border-b-cyan-300/20 border-b-[1px]">
+<section
+	name="hero"
+	class="hero-main flex flex-col w-full justify-center items-center bg-white/75 dark:bg-black/40 bg-gradient-to-b from-sky-500/20 via-black/1 to-purple-500/20 border-b-cyan-300/20 border-b-[1px]"
+>
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
 			class="text-4xl sm:text-5xl -mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
@@ -67,7 +72,7 @@
 	:root {
 		--hero-watermark-width: 100vw;
 		--hero-watermark-height: 90vh;
-        --hero-main-height: 84vh;
+		--hero-main-height: 84vh;
 	}
 
 	.section-bg {
@@ -75,18 +80,16 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		opacity: 0.1;
+		opacity: 0.3;
 		position: absolute;
 		top: -6vh;
 		left: 0;
-		height: calc(var(--hero-main-height) + var(--topnav-height)*2);
+		z-index: -1;
+		height: calc(var(--hero-main-height) + var(--topnav-height) * 2);
 		width: var(--hero-watermark-width);
-
 	}
 
 	.hero-main {
 		height: var(--hero-main-height);
 	}
-
-	
 </style>

@@ -22,25 +22,36 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import NavMobile from '$lib/components/NavMobile.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { SmallGridBackground, GridBackground, DotBackground } from '$lib/components/ui/GridAndDotBackground';
+	import {
+		SmallGridBackground,
+		GridBackground,
+		DotBackground
+	} from '$lib/components/ui/GridAndDotBackground';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
+
+	import { afterNavigate } from '$app/navigation';
+
+	afterNavigate(() => {
+		window.HSStaticMethods.autoInit();
+	});
 </script>
 
-<section name="layout-main"
-class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  "
+<section
+	name="layout-main"
+	class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen"
 >
-<!-- <GridBackground opacityDark={50} opacityLight={50}> -->
+	<!-- <GridBackground opacityDark={50} opacityLight={50}> -->
 	<div class="flex flex-col w-full h-full z-10">
 		<!-- <Nav /> -->
 
-			<NavMobile />
+		<NavMobile />
 
 		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />
 		</div>
 		<Footer />
 	</div>
-<!-- </GridBackground> -->
+	<!-- </GridBackground> -->
 </section>
 
 <style>
@@ -54,6 +65,4 @@ class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen  "
 		transition-delay: 0s;
 		
 	} */
-
-
 </style>

@@ -11,7 +11,7 @@ import svgToDataUri from 'mini-svg-data-uri';
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')], 
+	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}'), './node_modules/preline/preline.js'], 
 	theme: {
 		extend: {
 			fontFamily: {
@@ -71,6 +71,7 @@ export default {
 				],
 			},
 		}),
+		require('preline/plugin'),
 		aspectRatio,
 		addVariablesForColors,
 		function ({ matchUtilities, theme }: any) {
