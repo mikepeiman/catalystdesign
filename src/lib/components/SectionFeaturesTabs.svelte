@@ -19,7 +19,8 @@
 		IconDeviceAnalytics,
 		IconMail
 	} from '@tabler/icons-svelte';
-
+	import DotGridWave from './DotGridWave.svelte';
+	import { isDarkMode } from '$lib/utils/darkModeStore.js';
 	let activeTab = 'Design';
 
 	const processSteps = [
@@ -196,69 +197,86 @@
 	name="process-features"
 	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-cyan-100 via-fuchsia-100 to-green-100 dark:from-gray-800 dark:via-sky-800 dark:to-purple-800 animate-gradient-xy"
 >
+	<DotGridWave
+		dotColor={isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}
+		dotSpacing={20}
+		dotRadius={1}
+		waveDuration={3000}
+		maxScale={5}
+	/>
 	<div class="absolute inset-0 overflow-hidden pointer-events-none">
 		<!-- <div class="hex-grid"></div> -->
 		<!-- <div class="square-grid"></div> -->
-		<div class="dot-grid"></div>
+		<!-- <div class="absolute inset-0 overflow-hidden pointer-events-none z-0"> -->
+		<!-- <div class="dot-grid"></div> -->
+		<!-- <div class="dot-grid dot-grid-wave"></div> -->
+		<!-- <div class="dot-grid">
+                {#each Array(400) as _, i}
+                  <div class="dot" style="--delay: {i * 0.05}s;"></div>
+                {/each}
+              </div> -->
+		<!-- </div> -->
 	</div>
-	<div class="absolute inset-0 overflow-hidden pointer-events-none">
-		<div
-			class="absolute -top-16 -left-16 w-32 h-32 bg-cyan-200 dark:bg-cyan-800 rounded-full opacity-20 animate-float"
-		></div>
-		<div
-			class="absolute top-1/2 -right-24 w-48 h-48 bg-blue-200 dark:bg-blue-800 rounded-full opacity-20 animate-float animation-delay-2000"
-		></div>
-		<div
-			class="absolute bottom-20 left-24 w-24 h-24 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20 animate-float animation-delay-4000"
-		></div>
-	</div>
-	<div class="container mx-auto px-4">
-		<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl mb-12">
-			<h2 class="text-2xl font-bold leading-none sm:text-4xl mb-4">
-				Seamless Design to Growth Process
-			</h2>
-			<p class="px-4 sm:px-8">
-				Elevate your local business with our comprehensive design-development-deploy-maintain-growth
-				process. We transform your ideas into stunning, functional digital experiences that grow
-				with your business.
-			</p>
+	<div class="relative z-10">
+		<div class="absolute inset-0 overflow-hidden pointer-events-none">
+			<div
+				class="absolute -top-16 -left-16 w-32 h-32 bg-cyan-200 dark:bg-cyan-800 rounded-full opacity-20 animate-float"
+			></div>
+			<div
+				class="absolute top-1/2 -right-24 w-48 h-48 bg-blue-200 dark:bg-blue-800 rounded-full opacity-20 animate-float animation-delay-2000"
+			></div>
+			<div
+				class="absolute bottom-20 left-24 w-24 h-24 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20 animate-float animation-delay-4000"
+			></div>
 		</div>
-		<div class="grid grid-areas-mobile  gap-8">
-			<div class="grid-in-tabs mx-auto flex  overflow-x-auto md:overflow-x-visible self-center">
-				{#each processSteps as step}
-					<button
-						class="flex-shrink-0 px-4 py-2 md:py-3 text-left border-b-2 md:border-t-2 md:border-b-0 transition-colors duration-200 ease-in-out"
-						class:text-gray-900={activeTab === step.id}
-						class:dark:text-gray-100={activeTab === step.id}
-						class:border-cyan-600={activeTab === step.id}
-						class:dark:border-cyan-400={activeTab === step.id}
-						class:text-gray-600={activeTab !== step.id}
-						class:dark:text-gray-300={activeTab !== step.id}
-						class:border-gray-300={activeTab !== step.id}
-						class:dark:border-gray-600={activeTab !== step.id}
-						on:click={() => setActiveTab(step.id)}
-					>
-						{step.label}
-					</button>
-				{/each}
+		<div class="container mx-auto px-4">
+			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl mb-12">
+				<h2 class="text-2xl font-bold leading-none sm:text-4xl mb-4">
+					Seamless Design to Growth Process
+				</h2>
+				<p class="px-4 sm:px-8">
+					Elevate your local business with our comprehensive
+					design-development-deploy-maintain-growth process. We transform your ideas into stunning,
+					functional digital experiences that grow with your business.
+				</p>
 			</div>
-			<div class="grid-in-cards">
-				<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto">
-					{#each processFeatures[activeTab] as feature, index (feature.id)}
-						<div
-							class="group flex flex-col items-center justify-start space-y-3 md:items-start text-center md:text-left bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-							in:staggeredFlyFade={{ delay: index * 100, duration: 400 }}
-							out:fade={{ duration: 200 }}
-							animate:flip={{ duration: 300 }}
+			<div class="grid grid-areas-mobile gap-8">
+				<div class="grid-in-tabs mx-auto flex overflow-x-auto md:overflow-x-visible self-center">
+					{#each processSteps as step}
+						<button
+							class="flex-shrink-0 px-4 py-2 md:py-3 text-left border-b-2 md:border-t-2 md:border-b-0 transition-colors duration-200 ease-in-out"
+							class:text-gray-900={activeTab === step.id}
+							class:dark:text-gray-100={activeTab === step.id}
+							class:border-cyan-600={activeTab === step.id}
+							class:dark:border-cyan-400={activeTab === step.id}
+							class:text-gray-600={activeTab !== step.id}
+							class:dark:text-gray-300={activeTab !== step.id}
+							class:border-gray-300={activeTab !== step.id}
+							class:dark:border-gray-600={activeTab !== step.id}
+							on:click={() => setActiveTab(step.id)}
 						>
-							<svelte:component
-								this={feature.icon}
-								class="w-8 h-8 text-cyan-600 dark:text-cyan-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
-							/>
-							<h5 class="text-xl font-semibold">{feature.title}</h5>
-							<p class="text-sm flex-grow">{feature.description}</p>
-						</div>
+							{step.label}
+						</button>
 					{/each}
+				</div>
+				<div class="grid-in-cards">
+					<div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto">
+						{#each processFeatures[activeTab] as feature, index (feature.id)}
+							<div
+								class="group flex flex-col items-center justify-start space-y-3 md:items-start text-center md:text-left bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+								in:staggeredFlyFade={{ delay: index * 100, duration: 400 }}
+								out:fade={{ duration: 200 }}
+								animate:flip={{ duration: 300 }}
+							>
+								<svelte:component
+									this={feature.icon}
+									class="w-8 h-8 text-cyan-600 dark:text-cyan-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
+								/>
+								<h5 class="text-xl font-semibold">{feature.title}</h5>
+								<p class="text-sm flex-grow">{feature.description}</p>
+							</div>
+						{/each}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -350,6 +368,121 @@
 		background-size: 20px 20px;
 		animation: colorShift 15s infinite alternate;
 	}
+	.dot-grid-wave {
+		position: absolute;
+		width: 200%;
+		height: 200%;
+		top: -50%;
+		left: -50%;
+		background-image: radial-gradient(circle, rgb(0 0 0 / 0.1) 1px, transparent 1px);
+		background-size: 20px 20px;
+		animation:
+			wave 15s infinite linear,
+			colorShift 15s infinite alternate;
+	}
+
+	@keyframes wave {
+		0%,
+		100% {
+			transform: rotate(0deg) scale(1);
+		}
+		25% {
+			transform: rotate(2deg) scale(1.1) translateY(-1%);
+		}
+		50% {
+			transform: rotate(0deg) scale(1);
+		}
+		75% {
+			transform: rotate(-2deg) scale(0.9) translateY(1%);
+		}
+	}
+
+	@keyframes colorShift {
+		0% {
+			filter: hue-rotate(0deg);
+		}
+		100% {
+			filter: hue-rotate(360deg);
+		}
+	}
+	.dot-grid-wave {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+		background-size: 20px 20px;
+		animation: waveEffect 6s infinite linear;
+	}
+
+	@keyframes waveEffect {
+		0%,
+		100% {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		}
+		50% {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 40% 70%, 20% 40%, 0 20%);
+		}
+	}
+
+	.dark .dot-grid-wave {
+		background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+	}
+
+	.dot-grid-wave::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: inherit;
+		background-size: inherit;
+		animation: dotScale 12s infinite ease-in-out;
+	}
+
+	@keyframes dotScale {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(5);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	@keyframes scaleWave {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(5);
+		}
+	}
+
+	.dark .dot {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.dot {
+			animation: none;
+		}
+	}
+
+	@keyframes diagonalWave {
+		0%,
+		100% {
+			transform: translate(0, 0) scale(1);
+		}
+		50% {
+			transform: translate(-5%, -5%) scale(1.1);
+		}
+	}
+
+	.dark .dot-grid-wave {
+		background-image: radial-gradient(circle, rgb(255 255 255 / 1) 1px, transparent 1px);
+	}
 
 	@keyframes colorShift {
 		0% {
@@ -360,9 +493,6 @@
 		}
 	}
 
-	.dark .dot-grid {
-		background-image: radial-gradient(rgb(255 255 255 / 1) 1px, transparent 5px);
-	}
 	.square-grid {
 		position: absolute;
 		width: 100%;

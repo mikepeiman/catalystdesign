@@ -9,7 +9,13 @@
 	import css from 'highlight.js/lib/languages/css';
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
+	import { onMount } from 'svelte';
+	import { isDarkMode } from '$lib/utils/darkModeStore.js';
 
+	onMount(() => {
+		const unsubscribe = isDarkMode.init();
+		return unsubscribe;
+	});
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);
 	hljs.registerLanguage('javascript', javascript);
@@ -29,7 +35,6 @@
 		DotBackground
 	} from '$lib/components/ui/GridAndDotBackground';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
-
 </script>
 
 <section
