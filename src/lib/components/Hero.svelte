@@ -25,7 +25,7 @@
 		</div>
 
 		<div
-			class="subtext text-black dark:text-white font-inter flex flex-col items-center justify-center text-base md:text-xl text-center mt-8 w-full"
+			class="subtext text-black dark:text-white font-inter flex flex-col items-center justify-center font-extralight text-base md:text-xl text-center mt-8 w-full"
 		>
 			<p>You've got enough to do. Let us handle this part.</p>
 			<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>
