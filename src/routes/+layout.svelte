@@ -30,11 +30,6 @@
 	} from '$lib/components/ui/GridAndDotBackground';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
-	import { afterNavigate } from '$app/navigation';
-
-	afterNavigate(() => {
-		window.HSStaticMethods.autoInit();
-	});
 </script>
 
 <section
