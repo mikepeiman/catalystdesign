@@ -124,7 +124,7 @@
 					>
 						<img
 							class="max-w-full rounded-[1.25rem] h-auto"
-							src="static\images\avatars\avatar-1.jpg"
+							src="images\avatars\avatar-1.jpg"
 							alt="Image Description"
 						/>
 					</div>
@@ -153,7 +153,7 @@
 					<div class="bg-gray-800 rounded-b-lg">
 						<img
 							class="max-w-full h-auto rounded-b-lg"
-							src="static\images\avatars\avatar-1.jpg"
+							src="images\avatars\avatar-1.jpg"
 							alt="Image Description"
 						/>
 					</div>
@@ -180,7 +180,7 @@
 					>
 						<img
 							class="max-w-full rounded-[1.25rem] h-auto"
-							src="static\images\avatars\avatar-1.jpg"
+							src="images\avatars\avatar-1.jpg"
 							alt="Image Description"
 						/>
 					</div>
@@ -209,7 +209,7 @@
 					<div class="bg-gray-800 rounded-b-lg">
 						<img
 							class="max-w-full h-auto rounded-b-lg"
-							src="static\images\avatars\avatar-1.jpg"
+							src="images\avatars\avatar-1.jpg"
 							alt="Image Description"
 						/>
 					</div>
@@ -236,7 +236,7 @@
 					>
 						<img
 							class="max-w-full rounded-[1.25rem] h-auto"
-							src="static\images\avatars\avatar-1.jpg"
+							src="images\avatars\avatar-1.jpg"
 							alt="Image Description"
 						/>
 					</div>
@@ -265,7 +265,7 @@
 					<div class="bg-gray-800 rounded-b-lg">
 						<img
 							class="max-w-full h-auto rounded-b-lg"
-							src="static\images\avatars\avatar-1.jpg"
+							src="images\avatars\avatar-1.jpg"
 							alt="Image Description"
 						/>
 					</div>
