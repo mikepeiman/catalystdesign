@@ -36,7 +36,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@builder.io/sdk-svelte": "^1.0.31",
     "@floating-ui/dom": "1.6.5",
     "@tabler/icons-svelte": "^3.6.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",

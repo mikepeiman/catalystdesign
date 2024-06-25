@@ -8,13 +8,15 @@
 	import PrelineFeaturesHTabs from '$lib/components/PrelineFeaturesHTabs.svelte';
 	import PrelineFeaturesVTabs from '$lib/components/PrelineFeaturesVTabs.svelte';
 	import MambaFeaturesVTabs from '$lib/components/MambaFeaturesVTabs.svelte';
+	import SectionFeaturesTabs from '$lib/components/SectionFeaturesTabs.svelte';
 
 </script>
 
 <section name="homepage" class="w-full h-full">
 	<Hero />
-	<PrelineHeroPolygon />
-	<MambaFeaturesVTabs />
+	<!-- <PrelineHeroPolygon /> -->
+	 <SectionFeaturesTabs />
+	<!-- <MambaFeaturesVTabs /> -->
 	<PrelineFeaturesVTabs />
 	<PrelineFeaturesHTabs />
 	<SocialProof />
