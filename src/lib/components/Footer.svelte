@@ -59,19 +59,19 @@
 				<div class="w-fit px-12 text-base  grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {#each footerLinks as link}
             <p>
-              <a href={link.href} class="hover:text-cyan-400">{link.name}</a>
+              <a href={link.href} class="hover:text-catalyst-400">{link.name}</a>
             </p>
           {/each}
         </div>
         </div>
         <div name="socials" class="grid-area-social flex flex-col items-center justify-center gap-y-4 duration-150">
-				<a href="#" class=" hover:text-cyan-500 ">
+				<a href="#" class=" hover:text-catalyst-500 ">
 					<IconBrandFacebook class="w-5 h-5" />
 				</a>
-				<a href="#" class=" hover:text-cyan-500">
+				<a href="#" class=" hover:text-catalyst-500">
 					<IconBrandInstagram class="w-5 h-5" />
 				</a>
-				<a href="#" class=" hover:text-cyan-500 ">
+				<a href="#" class=" hover:text-catalyst-500 ">
 					<IconBrandLinkedin class="w-5 h-5" />
 				</a>
 			</div>

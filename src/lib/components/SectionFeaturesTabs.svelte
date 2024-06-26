@@ -197,7 +197,7 @@
 
 <section
 	name="process-features"
-	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-zinc-100 via-fuchsia-100 to-sky-100 dark:from-gray-800 dark:via-sky-800 dark:to-purple-800 animate-gradient-xy"
+	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-zinc-100 via-fuchsia-100 to-catalyst-100 dark:from-gray-800 dark:via-catalyst-800 dark:to-purple-800 animate-gradient-xy"
 >
 	<DotGridWave
 		dotColor={darkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)'}
@@ -226,8 +226,8 @@
 							class="flex-shrink-0 px-4 py-2 md:py-3 text-left border-b-2 md:border-t-2 md:border-b-0 transition-colors duration-200 ease-in-out"
 							class:text-gray-900={activeTab === step.id}
 							class:dark:text-gray-100={activeTab === step.id}
-							class:border-cyan-600={activeTab === step.id}
-							class:dark:border-cyan-400={activeTab === step.id}
+							class:border-catalyst-600={activeTab === step.id}
+							class:dark:border-catalyst-400={activeTab === step.id}
 							class:text-gray-600={activeTab !== step.id}
 							class:dark:text-gray-300={activeTab !== step.id}
 							class:border-gray-300={activeTab !== step.id}
@@ -249,7 +249,7 @@
 							>
 								<svelte:component
 									this={feature.icon}
-									class="w-8 h-8 text-cyan-600 dark:text-cyan-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
+									class="w-8 h-8 text-catalyst-600 dark:text-catalyst-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
 								/>
 								<h5 class="text-xl font-semibold">{feature.title}</h5>
 								<p class="text-sm flex-grow">{feature.description}</p>

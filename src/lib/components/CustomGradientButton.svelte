@@ -3,7 +3,7 @@
 	export let gradientAngleHover = '45deg'; // Default hover angle (45deg)
 	export let gradientStart = '#ff7a00'; // Default starting color (orange-900)
     export let gradientVia = '#ff7a00'; // Default via color (orange-900)
-	export let gradientEnd = '#00b5d8'; // Default ending color (cyan-500)
+	export let gradientEnd = '#00b5d8'; // Default ending color (catalyst-500)
 	export let gradientHoverStart = '#1d4ed8'; // Default hover starting color (blue-700)
     export let gradientHoverVia = '#1d4ed8'; // Default hover via color (blue-700)
 	export let gradientHoverEnd = '#c2410c'; // Default hover ending color (orange-700)

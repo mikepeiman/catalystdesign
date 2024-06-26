@@ -13,7 +13,7 @@
 
 <section
 	name="hero"
-	class="hero-main flex flex-col w-full justify-center items-center bg-white/75 dark:bg-black/40 bg-gradient-to-b from-sky-500/20 via-black/1 to-purple-500/20 border-b-cyan-300/20 border-b-[1px]"
+	class="hero-main flex flex-col w-full justify-center items-center bg-white/75 dark:bg-black/40 bg-gradient-to-b from-purple-300/20 via-black/1 to-catalyst-900/20 border-b-catalyst-300/20 border-b-[1px]"
 >
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
@@ -35,13 +35,13 @@
 					class="mr-6 "
 					gradientAngle="110deg"
 					gradientColors={[
-						{ color: 'var(--green-600)', stop: 20 },
-						{ color: 'var(--zinc-800)', stop: 20 },
-						{ color: 'var(--blue-700)', stop: 100 }
+						{ color: 'var(--green-500)', stop: 20 },
+						{ color: 'var(--catalyst-900)', stop: 20 },
+						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
 						{ color: 'var(--green-600)', stop: 0 },
-						{ color: 'var(--cyan-600)', stop: 100 }
+						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 				>
 					Get a Quick Quote
@@ -50,13 +50,13 @@
 					class=" "
 					gradientAngle="110deg"
 					gradientColors={[
-						{ color: 'var(--slate-600)', stop: 20 },
-						{ color: 'var(--zinc-800)', stop: 20 },
-						{ color: 'var(--blue-700)', stop: 100 }
+						{ color: 'var(--catalyst-500)', stop: 20 },
+						{ color: 'var(--catalyst-900)', stop: 20 },
+						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
-						{ color: 'var(--zinc-600)', stop: 0 },
-						{ color: 'var(--blue-600)', stop: 100 }
+						{ color: 'var(--catalyst-500)', stop: 0 },
+						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 				>
 					See Our Process

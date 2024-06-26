@@ -17,12 +17,12 @@
 				'Free updates: 6 months'
 			],
 			gradientColors: [
-				{ color: 'var(--cyan-600)', stop: 20 },
+				{ color: 'var(--catalyst-600)', stop: 20 },
 				{ color: 'var(--purple-800)', stop: 20 },
 				{ color: 'var(--blue-700)', stop: 100 }
 			],
 			gradientHoverColors: [
-				{ color: 'var(--cyan-600)', stop: 0 },
+				{ color: 'var(--catalyst-600)', stop: 0 },
 				{ color: 'var(--blue-600)', stop: 100 }
 			]
 		},
@@ -60,19 +60,19 @@
 				'Free updates: 36 months'
 			],
 			gradientColors: [
-				{ color: 'var(--cyan-600)', stop: 20 },
+				{ color: 'var(--catalyst-600)', stop: 20 },
 				{ color: 'var(--purple-800)', stop: 20 },
 				{ color: 'var(--blue-700)', stop: 100 }
 			],
 			gradientHoverColors: [
-				{ color: 'var(--cyan-600)', stop: 0 },
+				{ color: 'var(--catalyst-600)', stop: 0 },
 				{ color: 'var(--blue-600)', stop: 100 }
 			]
 		}
 	];
 </script>
 
-<section name="pricing-table" class="relative py-[12%] border-cyan-300/20 border-b-[1px]">
+<section name="pricing-table" class="relative py-[12%] border-catalyst-300/20 border-b-[1px]">
 	<div class="pricing-bg"></div>
 	<div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-12">
 		<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">

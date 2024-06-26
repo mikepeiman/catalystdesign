@@ -7,35 +7,35 @@
 		<div class="grid grid-cols-5 p-4 md:p-8">
 			<div class="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
 				<button class="p-2 border-b-2 md:border-l-2 md:border-b-0 md:py-3 dark:border-gray-700 dark:text-gray-600">Mucius</button>
-				<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 dark:text-gray-900 dark:border-cyan-600">Fabellas</button>
+				<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 dark:text-gray-900 dark:border-catalyst-600">Fabellas</button>
 				<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 dark:border-gray-700 dark:text-gray-600">Aperiam</button>
 				<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 dark:border-gray-700 dark:text-gray-600">Nonumy</button>
 				<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 dark:border-gray-700 dark:text-gray-600">Propriae</button>
 			</div>
 			<div class="grid gap-12 py-4 text-center sm:grid-cols-2 col-span-full md:col-span-4 md:text-left">
 				<div class="flex flex-col items-center justify-center space-y-3 md:justify-start md:items-start">
-					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-cyan-600">
+					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-catalyst-600">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
 					</svg>
 					<h5 class="text-xl font-semibold">Est facilisis necessitatibus ea</h5>
 					<p>Ex audiam inermis elaboraret eam, oratio petentium ne cum, mundi interesset sit no.</p>
 				</div>
 				<div class="flex flex-col items-center justify-center space-y-3 md:justify-start md:items-start">
-					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-cyan-600">
+					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-catalyst-600">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
 					</svg>
 					<h5 class="text-xl font-semibold">Vim iudico iisque te</h5>
 					<p>At cibo possim impetus pro, ius id mutat commodo offendit. Cum inani pertinax definitiones ad.</p>
 				</div>
 				<div class="flex flex-col items-center justify-center space-y-3 md:justify-start md:items-start">
-					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-cyan-600">
+					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-catalyst-600">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
 					</svg>
 					<h5 class="text-xl font-semibold">Sea inani viris at</h5>
 					<p>Et eos atomorum urbanitas accommodare, in suscipit petentium vis. Pro ea nibh praesent postulant.</p>
 				</div>
 				<div class="flex flex-col items-center justify-center space-y-3 md:justify-start md:items-start">
-					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-cyan-600">
+					<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-catalyst-600">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
 					</svg>
 					<h5 class="text-xl font-semibold">Error nihil primis sit ut</h5>

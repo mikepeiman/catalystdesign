@@ -42,7 +42,7 @@
       }
     ]
   </script>
-  <section name="blog-posts" class="bg-white/75 dark:bg-black/75 bg-grid-white/10 text-black dark:text-white relative h-full border-cyan-300/20 border-b-[1px] py-24">
+  <section name="blog-posts" class="bg-white/75 dark:bg-black/75 bg-grid-white/10 text-black dark:text-white relative h-full border-catalyst-300/20 border-b-[1px] py-24">
       <!-- <div class="section-bg"></div> -->
 
     <div class="max-w-7xl mx-auto px-4 pt-16 pb-20">
@@ -137,6 +137,6 @@
 		height: 100%;
 		/* width: var(--hero-watermark-width); */
 		width: 100vw;
-		border-bottom: 4px solid var(--cyan-300);
+		border-bottom: 4px solid var(--catalyst-300);
 	}
   </style>

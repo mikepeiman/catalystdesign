@@ -61,11 +61,11 @@
 			class="mr-4"
 			gradientAngle="90deg"
 			gradientColors={[
-				{ color: 'var(--cyan-600)', stop: 0 },
+				{ color: 'var(--catalyst-600)', stop: 0 },
 				{ color: 'var(--blue-700)', stop: 100 }
 			]}
 			gradientHoverColors={[
-				{ color: 'var(--cyan-500)', stop: 0 },
+				{ color: 'var(--catalyst-500)', stop: 0 },
 				{ color: 'var(--blue-600)', stop: 100 }
 			]}
 			>Login</GradientButton

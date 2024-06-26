@@ -3,14 +3,14 @@
 	export let gradientAngle = '45deg'; // Default angle (45deg)
 	export let gradientAngleHover = '45deg'; // Default hover angle (45deg)
 	export let gradientColors = [
-		{ color: 'var(--cyan-600)', stop: 0 },
+		{ color: 'var(--catalyst-600)', stop: 0 },
 		{ color: 'var(--purple-800)', stop: 50 },
-		{ color: 'var(--blue-700)', stop: 100 }
-	]; // Default colors (orange-900, orange-900, cyan-500)
+		{ color: 'var(--catalyst-800)', stop: 100 }
+	]; // Default colors (orange-900, orange-900, catalyst-500)
 	export let gradientHoverColors = [
-		{ color: 'var(--cyan-500)', stop: 0 },
+		{ color: 'var(--catalyst-500)', stop: 0 },
 		{ color: 'var(--purple-600)', stop: 50 },
-		{ color: 'var(--blue-600)', stop: 100 }
+		{ color: 'var(--catalyst-700)', stop: 100 }
 	]; // Default hover colors (blue-700, blue-700, orange-700)
 	export let hoverScale = 1.025; // Default hover scale (1.05)
 	let gradientCss = `linear-gradient(${gradientAngle}, ${gradientColors.map((c) => `${c.color} ${c.stop}%`).join(', ')})`;
