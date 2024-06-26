@@ -197,19 +197,19 @@
 
 <section
 	name="process-features"
-	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-catalyst-0 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
+	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-0 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
 <DotGridWave
   dotColor="rgba(0, 0, 0, 0.1)"
   waveColorStart="text-blue-500"
   waveColorEnd="text-purple-500"
-  waveOpacityStart={0.2}
+  waveOpacityStart={0.1}
   waveOpacityEnd={0.1}
   dotSpacing={20}
   dotRadius={1}
-  waveDuration={10000}
+  waveDuration={6000}
   maxScale={5}
-  numWaves={8}
+  numWaves={3}
 />
 
 	<div class="relative z-10">
