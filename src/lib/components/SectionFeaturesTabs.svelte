@@ -201,13 +201,15 @@
 >
 <DotGridWave
   dotColor="rgba(0, 0, 0, 0.1)"
-  waveColorStart="text-blue-500/20"
-  waveColorEnd="text-purple-500/20"
+  waveColorStart="text-blue-500"
+  waveColorEnd="text-purple-500"
+  waveOpacityStart={0.2}
+  waveOpacityEnd={0.1}
   dotSpacing={20}
   dotRadius={1}
-  waveDuration={6000}
+  waveDuration={10000}
   maxScale={5}
-  waveVariation={.2}
+  numWaves={8}
 />
 
 	<div class="relative z-10">

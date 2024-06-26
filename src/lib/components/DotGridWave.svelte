@@ -5,18 +5,19 @@
 	export let dotColor = 'rgba(0, 0, 0, 0.1)';
 	export let waveColorStart = 'text-blue-500';
 	export let waveColorEnd = 'text-purple-500';
+	export let waveOpacityStart = 0.3;
+	export let waveOpacityEnd = 0.3;
 	export let dotSpacing = 20;
 	export let dotRadius = 1;
 	export let waveDuration = 19000;
 	export let maxScale = 5;
-	export let waveVariation = 0.2; // Degree of variation in wave origin (0-1)
+	export let numWaves = 1;
 
 	let canvas;
 	let ctx;
 	let width;
 	let height;
 	let animationId;
-	let waveOriginAngle = 0;
 
 	function getColorFromClass(colorClass) {
 		const tempDiv = document.createElement('div');
@@ -27,11 +28,12 @@
 		return color;
 	}
 
-	function interpolateColor(color1, color2, factor) {
+	function interpolateColor(color1, color2, opacityStart, opacityEnd, factor) {
 		const c1 = color1.match(/\d+/g).map(Number);
 		const c2 = color2.match(/\d+/g).map(Number);
 		const result = c1.map((c, i) => Math.round(c + factor * (c2[i] - c)));
-		return `rgba(${result.join(',')},${0.3})`;  // Adding fixed 0.3 alpha
+		const opacity = opacityStart + factor * (opacityEnd - opacityStart);
+		return `rgba(${result.join(',')},${opacity})`;
 	}
 
 	onMount(() => {
@@ -75,42 +77,40 @@
 		function animate() {
 			const currentTime = Date.now();
 			const elapsed = currentTime - startTime;
-			const progress = (elapsed % waveDuration) / waveDuration;
-
+			
 			ctx.clearRect(0, 0, width, height);
 
-			// Update wave origin angle
-			waveOriginAngle = (waveOriginAngle + waveVariation * Math.PI / 180) % (2 * Math.PI);
+			for (let waveIndex = 0; waveIndex < numWaves; waveIndex++) {
+				const waveProgress = ((elapsed / waveDuration) + (waveIndex / numWaves)) % 1;
 
-			// Calculate wave origin point
-			const originX = width / 2 + Math.cos(waveOriginAngle) * width / 2;
-			const originY = height / 2 + Math.sin(waveOriginAngle) * height / 2;
+				for (let x = 0; x < width; x += dotSpacing) {
+					for (let y = 0; y < height; y += dotSpacing) {
+						const dx = x - width / 2;
+						const dy = y - height / 2;
+						const distance = Math.sqrt(dx * dx + dy * dy);
+						const maxDistance = Math.sqrt(width * width + height * height) / 2;
+						const delay = distance / maxDistance;
 
-			for (let x = 0; x < width; x += dotSpacing) {
-				for (let y = 0; y < height; y += dotSpacing) {
-					const dx = x - originX;
-					const dy = y - originY;
-					const distance = Math.sqrt(dx * dx + dy * dy);
-					const maxDistance = Math.sqrt(width * width + height * height);
-					const delay = distance / maxDistance;
+						let scale = 1;
 
-					let scale = 1;
+						if (waveProgress > delay && waveProgress < delay + 0.1) {
+							const localProgress = (waveProgress - delay) / 0.1;
+							scale = 1 + (maxScale - 1) * Math.sin(localProgress * Math.PI);
 
-					if (progress > delay && progress < delay + 0.1) {
-						const localProgress = (progress - delay) / 0.1;
-						scale = 1 + (maxScale - 1) * Math.sin(localProgress * Math.PI);
+							// Gradual hue and opacity change
+							const hueProgress = distance / maxDistance;
+							const waveColor = interpolateColor(startColor, endColor, waveOpacityStart, waveOpacityEnd, hueProgress);
 
-						const waveColor = interpolateColor(startColor, endColor, localProgress);
-
-						ctx.beginPath();
-						ctx.arc(x, y, dotRadius * scale, 0, Math.PI * 2);
-						ctx.fillStyle = waveColor;
-						ctx.fill();
-					} else {
-						ctx.beginPath();
-						ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
-						ctx.fillStyle = dotColor;
-						ctx.fill();
+							ctx.beginPath();
+							ctx.arc(x, y, dotRadius * scale, 0, Math.PI * 2);
+							ctx.fillStyle = waveColor;
+							ctx.fill();
+						} else {
+							ctx.beginPath();
+							ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
+							ctx.fillStyle = dotColor;
+							ctx.fill();
+						}
 					}
 				}
 			}
