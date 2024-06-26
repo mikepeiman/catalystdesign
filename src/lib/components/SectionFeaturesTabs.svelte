@@ -197,7 +197,7 @@
 
 <section
 	name="process-features"
-	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-zinc-100 via-fuchsia-100 to-catalyst-100 dark:from-gray-800 dark:via-catalyst-800 dark:to-purple-800 animate-gradient-xy"
+	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-zinc-100 via-fuchsia-100 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
 	<DotGridWave
 		dotColor={darkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)'}

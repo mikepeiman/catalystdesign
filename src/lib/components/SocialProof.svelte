@@ -39,7 +39,7 @@
 </div>
 <section
 	name="social"
-	class="bg-gradient-to-br from-purple-200 to-blue-200 dark:from-purple-900 dark:to-blue-900  relative dark:bg-black/40 w-full flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-catalyst-300/20 border-b-[1px]"
+	class="bg-gradient-to-br from-purple-200 to-blue-200 dark:from-catalyst-900 dark:to-catalyst-800  relative dark:bg-black/40 w-full flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-catalyst-300/20 border-b-[1px]"
 >
 	<div class="masked-element bg-zinc-200 dark:bg-black/75 absolute top-0 left-0 w-full h-full z-0"></div>
 
