@@ -2,7 +2,7 @@ import { join } from 'path'
 import type { Config } from 'tailwindcss'
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
-import { skeleton } from '@skeletonlabs/tw-plugin';
+
 import { catalyst } from './src/catalyst'
 import {generateCustomColors} from './src/lib/utils/generateCustomColors.js'
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
@@ -11,7 +11,7 @@ import svgToDataUri from 'mini-svg-data-uri';
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}'), './node_modules/preline/preline.js'],
+	content: ['./src/**/*.{html,js,svelte,ts}', './node_modules/preline/preline.js'],
 	theme: {
 		extend: {
 			fontFamily: {
@@ -51,55 +51,6 @@ export default {
 	plugins: [
 		forms,
 		typography,
-		skeleton({
-			themes: {
-				preset: [
-					{
-						name: 'skeleton',
-						enhancements: true,
-					},
-					{
-						name: 'wintry',
-						enhancements: true,
-					},
-					{
-						name: 'modern',
-						enhancements: true,
-					},
-					{
-						name: 'hamlindigo',
-						enhancements: true,
-					},
-					{
-						name: 'rocket',
-						enhancements: true,
-					},
-					{
-						name: 'sahara',
-						enhancements: true,
-					},
-					{
-						name: 'gold-nouveau',
-						enhancements: true,
-					},
-					{
-						name: 'vintage',
-						enhancements: true,
-					},
-					{
-						name: 'seafoam',
-						enhancements: true,
-					},
-					{
-						name: 'crimson',
-						enhancements: true,
-					},
-				],
-				custom: [
-					catalyst,
-				],
-			},
-		}),
 		require('preline/plugin'),
 		aspectRatio,
 		addVariablesForColors,

@@ -1,5 +1,4 @@
 <script>
-	// import { Button, GradientButton } from 'flowbite-svelte';
 	import GradientButton from '$lib/components/GradientButton.svelte';
 	import { IconArrowRight, IconCalendar } from '@tabler/icons-svelte';
 	// import { SmallGridBackground, GridBackground, DotBackground } from './ui/GridAndDotBackground';

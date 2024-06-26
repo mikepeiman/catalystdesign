@@ -2,6 +2,11 @@
 import { readable } from 'svelte/store';
 
 export const isDarkMode = readable(false, set => {
+  if (typeof window === 'undefined') {
+    // We're on the server, do nothing
+    return;
+  }
+
   // Function to check if dark mode is active
   const checkDarkMode = () => {
     const isDark = document.documentElement.classList.contains('dark');
