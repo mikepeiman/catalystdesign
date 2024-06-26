@@ -21,8 +21,10 @@
 	} from '@tabler/icons-svelte';
 	import DotGridWave from './DotGridWave.svelte';
 	import { isDarkMode } from '$lib/utils/darkModeStore.js';
+    import { browser } from '$app/environment';
 	let activeTab = 'Design';
-
+    let darkMode = "dark"
+$: browser ? darkMode = $isDarkMode : null
 	const processSteps = [
 		{ id: 'Design', label: 'Design' },
 		{ id: 'Develop', label: 'Develop' },
@@ -195,10 +197,10 @@
 
 <section
 	name="process-features"
-	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-teal-100 via-fuchsia-100 to-sky-100 dark:from-gray-800 dark:via-sky-800 dark:to-purple-800 animate-gradient-xy"
+	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-zinc-100 via-fuchsia-100 to-sky-100 dark:from-gray-800 dark:via-sky-800 dark:to-purple-800 animate-gradient-xy"
 >
 	<DotGridWave
-		dotColor={$isDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)'}
+		dotColor={darkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)'}
 		dotSpacing={20}
 		dotRadius={1}
 		waveDuration={3000}
