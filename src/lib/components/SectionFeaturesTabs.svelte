@@ -198,35 +198,39 @@
 
 <section
 	name="process-features"
-	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-0 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
+	class="pt-24 pb-36 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-catalyst-100 via-gray-200 to-catalyst-300 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
+<!-- <section
+	name="process-features"
+	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-300 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
+> -->
 
-    <DotGridWave
+    <!-- <DotGridWave
     class="z-0"
     dotColor="rgba(0, 0, 0, 0.1)"
-    waveColorStart="text-blue-500"
-    waveColorEnd="text-purple-500"
-    waveOpacityStart={0.13}
-    waveOpacityEnd={0.17}
+    waveColorStart="text-catalyst-300"
+    waveColorEnd="text-green-500"
+    waveOpacityStart={0.3}
+    waveOpacityEnd={0.3}
     dotSpacing={20}
     dotRadius={1}
     waveDuration={15000}
     maxScale={5}
     numWaves={6}
     useMouseInteraction={false}
-    waveOrigin={{ x: -50, y: -50 }}
+    waveOrigin={{ x: -5, y: -5 }}
     consecutiveWaves={5}
-  />
+  /> -->
 
 	<div class="relative z-10">
-		<div class="container mx-auto px-4">
+		<div class="container mx-auto px-4 w-fit">
             <BlurredBackdrop
             class="z-10"
             blurAmount={5}
             opacity={0.8}
-            backgroundColor="rgba(255, 255, 255, 0.3)"
+            backgroundColor="rgba(255, 255, 255, 0)"
           >
-			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl mb-12">
+			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-4xl mb-12">
 				<h2 class="text-2xl font-bold leading-none sm:text-4xl mb-4">
 					Seamless Design to Growth Process
 				</h2>
@@ -265,11 +269,13 @@
 								out:fade={{ duration: 200 }}
 								animate:flip={{ duration: 300 }}
 							>
-								<svelte:component
-									this={feature.icon}
-									class="w-8 h-8 text-catalyst-600 dark:text-catalyst-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
-								/>
-								<h5 class="text-xl font-semibold">{feature.title}</h5>
+								<div class="flex">
+									<svelte:component
+										this={feature.icon}
+										class="w-8 h-8 text-catalyst-600 dark:text-catalyst-400 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
+									/>
+									<h5 class="text-xl font-semibold ml-4">{feature.title}</h5>
+								</div>
 								<p class="text-sm flex-grow">{feature.description}</p>
 							</div>
 						{/each}

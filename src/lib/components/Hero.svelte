@@ -41,7 +41,7 @@
 					]}
 					gradientHoverColors={[
 						{ color: 'var(--green-500)', stop: 0 },
-						{ color: 'var(--catalyst-500)', stop: 25 },
+						{ color: 'var(--catalyst-700)', stop: 25 },
 						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 				>

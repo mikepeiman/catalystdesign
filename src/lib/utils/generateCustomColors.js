@@ -25,8 +25,10 @@ function generateCustomColors(colorConfig) {
     const b = interpolate(brightness.start, brightness.end, t, brightness.curve);
     
     const color = chroma.hsv(h, s, b);
-    
-    const step = minorSteps.includes(i) ? (i * 100) : Math.round(i / (steps - 1) * 900 + 100);
+    const maxValue = Math.max(900, (steps - 1) * 100);
+    // const step = minorSteps.includes(i) ? (i * 100) : Math.round(i / (steps - 1) * 900 + 100);
+    const step =  Math.round((i / (steps - 1)) * (maxValue - 100) / 100) * 100 + 100;
+    console.log(`🚀 ~ generateCustomColors ~ step: ${i}: ${step}` )
     colors[step] = color.hex();
   }
 

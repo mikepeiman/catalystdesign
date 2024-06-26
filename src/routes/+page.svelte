@@ -15,11 +15,11 @@
 <section name="homepage" class="w-full h-full">
 	<Hero />
 	<!-- <PrelineHeroPolygon /> -->
+	<SocialProof />
 	 <SectionFeaturesTabs />
 	<!-- <MambaFeaturesVTabs /> -->
 	<PrelineFeaturesVTabs />
 	<PrelineFeaturesHTabs />
-	<SocialProof />
 	<BlogSection />
 	<PricingTable />
 </section>

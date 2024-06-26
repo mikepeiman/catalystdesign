@@ -39,7 +39,7 @@ export default {
 						}
 					},
 					"options": {
-						"minorSteps": [0, 1],
+						"minorSteps": [0, 0],
 						"name": "Catalyst",
 						"provideInverted": false,
 						"rotation": "clockwise"

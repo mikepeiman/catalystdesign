@@ -2,10 +2,9 @@
 	import GradientButton from '$lib/components/GradientButton.svelte';
 </script>
 
-<div class="w-screen min-h-screen pile mx-auto size-full ">
+<div class="w-screen min-h-screen pile mx-auto size-full">
 	<div class="section-bg w-full h-full"></div>
-<div class="pile z-10 mt-20">
-	
+	<div class="pile z-10 mt-20">
 		<!-- ========== HEADER ========== -->
 		<header class="mb-auto flex justify-center z-50 w-full py-4">
 			<nav class="px-4 sm:px-6 lg:px-8" aria-label="Global">
@@ -17,7 +16,7 @@
 			</nav>
 		</header>
 		<!-- ========== END HEADER ========== -->
-	
+
 		<!-- ========== MAIN CONTENT ========== -->
 		<main id="content" class="">
 			<div class="text-center py-10 px-4 sm:px-6 lg:px-8">
@@ -47,17 +46,18 @@
 			</div>
 		</main>
 		<!-- ========== END MAIN CONTENT ========== -->
-	
+
 		<!-- ========== FOOTER ========== -->
 		<footer class="mt-auto text-center py-5">
 			<div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
 				<p class="text-sm text-gray-500 dark:text-neutral-500">© All Rights Reserved. 2022.</p>
 			</div>
 		</footer>
-</div>
+	</div>
 
 	<!-- ========== END FOOTER ========== -->
 </div>
+
 <!-- <section class="error flex flex-col h-full w-screen">
 	<div class="flex flex-col w-fit items-center">
 		<p class="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
