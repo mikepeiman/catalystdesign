@@ -12,14 +12,24 @@
 	export let waveDuration = 19000;
 	export let maxScale = 5;
 	export let numWaves = 3;
+	export let useMouseInteraction = true;
+	export let waveOrigin = { x: 50, y: 50 }; // Default to center
+	export let consecutiveWaves = 1;
 
 	let canvas;
 	let ctx;
 	let width;
 	let height;
 	let animationId;
-	let mouseX = 0;
-	let mouseY = 0;
+	let originX = 0;
+	let originY = 0;
+
+	$: updateOrigin(waveOrigin, width, height);
+
+	function updateOrigin({ x, y }, canvasWidth, canvasHeight) {
+		originX = (x / 100) * canvasWidth;
+		originY = (y / 100) * canvasHeight;
+	}
 
 	function getColorFromClass(colorClass) {
 		const tempDiv = document.createElement('div');
@@ -42,14 +52,18 @@
 		ctx = canvas.getContext('2d');
 		resizeCanvas();
 		window.addEventListener('resize', resizeCanvas);
-		window.addEventListener('mousemove', handleGlobalMouseMove);
+		if (useMouseInteraction) {
+			window.addEventListener('mousemove', handleGlobalMouseMove);
+		}
 		animateDots();
 	});
 
 	if (browser) {
 		onDestroy(() => {
 			window.removeEventListener('resize', resizeCanvas);
-			window.removeEventListener('mousemove', handleGlobalMouseMove);
+			if (useMouseInteraction) {
+				window.removeEventListener('mousemove', handleGlobalMouseMove);
+			}
 			cancelAnimationFrame(animationId);
 		});
 	}
@@ -57,20 +71,18 @@
 	function resizeCanvas() {
 		width = canvas.width = canvas.offsetWidth;
 		height = canvas.height = canvas.offsetHeight;
-		mouseX = width / 2;
-		mouseY = height / 2;
+		updateOrigin(waveOrigin, width, height);
 	}
 
 	function handleGlobalMouseMove(event) {
 		const rect = canvas.getBoundingClientRect();
-		mouseX = event.clientX - rect.left;
-		mouseY = event.clientY - rect.top;
+		originX = event.clientX - rect.left;
+		originY = event.clientY - rect.top;
 
-		// Clamp mouse position to canvas boundaries
-		mouseX = Math.max(0, Math.min(mouseX, width));
-		mouseY = Math.max(0, Math.min(mouseY, height));
+		// Clamp origin position to canvas boundaries
+		originX = Math.max(0, Math.min(originX, width));
+		originY = Math.max(0, Math.min(originY, height));
 	}
-
 
 	function animateDots() {
 		const startTime = Date.now();
@@ -80,40 +92,55 @@
 		function animate() {
 			const currentTime = Date.now();
 			const elapsed = currentTime - startTime;
-			
+
 			ctx.clearRect(0, 0, width, height);
 
-			for (let waveIndex = 0; waveIndex < numWaves; waveIndex++) {
-				const waveProgress = ((elapsed / waveDuration) + (waveIndex / numWaves)) % 1;
+			const maxDistance = Math.sqrt(width * width + height * height);
+			const waveWidth = maxDistance * 0.1;
 
-				for (let x = 0; x < width; x += dotSpacing) {
-					for (let y = 0; y < height; y += dotSpacing) {
-						const dx = x - mouseX;
-						const dy = y - mouseY;
-						const distance = Math.sqrt(dx * dx + dy * dy);
-						const maxDistance = Math.sqrt(width * width + height * height);
-						const delay = distance / maxDistance;
+			for (let x = 0; x < width; x += dotSpacing) {
+				for (let y = 0; y < height; y += dotSpacing) {
+					const dx = x - originX;
+					const dy = y - originY;
+					const distance = Math.sqrt(dx * dx + dy * dy);
 
-						let scale = 1;
+					let scale = 1;
+					let dotFillStyle = dotColor;
 
-						if (waveProgress > delay && waveProgress < delay + 0.1) {
-							const localProgress = (waveProgress - delay) / 0.1;
-							scale = 1 + (maxScale - 1) * Math.sin(localProgress * Math.PI);
+					for (let waveIndex = 0; waveIndex < numWaves; waveIndex++) {
+						const baseWaveProgress = (elapsed / waveDuration + waveIndex / numWaves) % 1;
+						const waveProgress = baseWaveProgress * (1 + 1 / consecutiveWaves);
 
-							const hueProgress = distance / maxDistance;
-							const waveColor = interpolateColor(startColor, endColor, waveOpacityStart, waveOpacityEnd, hueProgress);
+						const waveRadius = waveProgress * maxDistance;
+						const distanceFromWave = Math.abs(distance - waveRadius);
 
-							ctx.beginPath();
-							ctx.arc(x, y, dotRadius * scale, 0, Math.PI * 2);
-							ctx.fillStyle = waveColor;
-							ctx.fill();
-						} else {
-							ctx.beginPath();
-							ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
-							ctx.fillStyle = dotColor;
-							ctx.fill();
+						if (distanceFromWave < waveWidth && distance <= waveRadius) {
+							const localProgress = 1 - distanceFromWave / waveWidth;
+							const waveScale = 1 + (maxScale - 1) * Math.sin(localProgress * Math.PI);
+
+							// Gradually increase the wave effect as it expands
+							const expansionFactor = Math.min(1, waveRadius / (maxDistance * 0.1));
+							const adjustedScale = 1 + (waveScale - 1) * expansionFactor;
+
+							if (adjustedScale > scale) {
+								scale = adjustedScale;
+								const hueProgress = distance / maxDistance;
+								const colorFactor = hueProgress * expansionFactor;
+								dotFillStyle = interpolateColor(
+									startColor,
+									endColor,
+									waveOpacityStart,
+									waveOpacityEnd,
+									colorFactor
+								);
+							}
 						}
 					}
+
+					ctx.beginPath();
+					ctx.arc(x, y, dotRadius * scale, 0, Math.PI * 2);
+					ctx.fillStyle = dotFillStyle;
+					ctx.fill();
 				}
 			}
 
@@ -124,11 +151,4 @@
 	}
 </script>
 
-
 <canvas bind:this={canvas} class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
-
-<style>
-	canvas {
-		pointer-events: auto;
-	}
-</style>

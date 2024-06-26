@@ -20,6 +20,7 @@
 		IconMail
 	} from '@tabler/icons-svelte';
 	import DotGridWave from './DotGridWave.svelte';
+    import BlurredBackdrop from './BlurredBackdrop.svelte';
 	import { isDarkMode } from '$lib/utils/darkModeStore.js';
 	import { browser } from '$app/environment';
 	let activeTab = 'Design';
@@ -199,21 +200,32 @@
 	name="process-features"
 	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-0 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
-<DotGridWave
-  dotColor="rgba(0, 0, 0, 0.1)"
-  waveColorStart="text-blue-500"
-  waveColorEnd="text-purple-500"
-  waveOpacityStart={0.1}
-  waveOpacityEnd={0.1}
-  dotSpacing={20}
-  dotRadius={1}
-  waveDuration={6000}
-  maxScale={5}
-  numWaves={3}
-/>
+
+    <DotGridWave
+    class="z-0"
+    dotColor="rgba(0, 0, 0, 0.1)"
+    waveColorStart="text-blue-500"
+    waveColorEnd="text-purple-500"
+    waveOpacityStart={0.13}
+    waveOpacityEnd={0.17}
+    dotSpacing={20}
+    dotRadius={1}
+    waveDuration={15000}
+    maxScale={5}
+    numWaves={6}
+    useMouseInteraction={false}
+    waveOrigin={{ x: -50, y: -50 }}
+    consecutiveWaves={5}
+  />
 
 	<div class="relative z-10">
 		<div class="container mx-auto px-4">
+            <BlurredBackdrop
+            class="z-10"
+            blurAmount={5}
+            opacity={0.8}
+            backgroundColor="rgba(255, 255, 255, 0.3)"
+          >
 			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl mb-12">
 				<h2 class="text-2xl font-bold leading-none sm:text-4xl mb-4">
 					Seamless Design to Growth Process
@@ -224,6 +236,7 @@
 					functional digital experiences that grow with your business.
 				</p>
 			</div>
+        </BlurredBackdrop>
 			<div class="grid grid-areas-mobile gap-8">
 				<div class="grid-in-tabs mx-auto flex overflow-x-auto md:overflow-x-visible self-center">
 					{#each processSteps as step}
