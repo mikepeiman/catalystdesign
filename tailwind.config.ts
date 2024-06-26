@@ -4,19 +4,48 @@ import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
 import { catalyst } from './src/catalyst'
-
+import {generateCustomColors} from './src/lib/utils/generateCustomColors.js'
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
 import aspectRatio from '@tailwindcss/aspect-ratio';
 import svgToDataUri from 'mini-svg-data-uri';
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}'), './node_modules/preline/preline.js'], 
+	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}'), './node_modules/preline/preline.js'],
 	theme: {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
 			},
+			colors: generateCustomColors([
+				{
+					"properties": {
+						"steps": 10,
+						"hue": {
+							"start": 192,
+							"end": 205,
+							"curve": "easeOutQuad"
+						},
+						"saturation": {
+							"start": 0.37,
+							"end": 0.84,
+							"rate": 1.1,
+							"curve": "easeOutQuad"
+						},
+						"brightness": {
+							"start": 1,
+							"end": 0.13,
+							"curve": "linear"
+						}
+					},
+					"options": {
+						"minorSteps": [0, 1],
+						"name": "Catalyst",
+						"provideInverted": false,
+						"rotation": "clockwise"
+					}
+				}
+			])
 		},
 	},
 	plugins: [

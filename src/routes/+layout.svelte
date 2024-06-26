@@ -10,8 +10,6 @@
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
 	import { onMount } from 'svelte';
-	import { isDarkMode } from '$lib/utils/darkModeStore.js';
-
 
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);

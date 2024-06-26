@@ -21,10 +21,10 @@
 	} from '@tabler/icons-svelte';
 	import DotGridWave from './DotGridWave.svelte';
 	import { isDarkMode } from '$lib/utils/darkModeStore.js';
-    import { browser } from '$app/environment';
+	import { browser } from '$app/environment';
 	let activeTab = 'Design';
-    let darkMode = "dark"
-$: browser ? darkMode = $isDarkMode : null
+	let darkMode = 'dark';
+	$: browser ? (darkMode = $isDarkMode) : null;
 	const processSteps = [
 		{ id: 'Design', label: 'Design' },
 		{ id: 'Develop', label: 'Develop' },
@@ -183,7 +183,7 @@ $: browser ? darkMode = $isDarkMode : null
 				const eased = cubicOut(t);
 				return `
             opacity: ${eased};
-            transform: translate3d(0, ${(1 - eased) * 20}px, 0);
+            transform: translate3d(0, ${(1 - eased) * 200}px, 0);
           `;
 			}
 		};
