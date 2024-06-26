@@ -12,10 +12,7 @@
 	import { onMount } from 'svelte';
 	import { isDarkMode } from '$lib/utils/darkModeStore.js';
 
-	onMount(() => {
-		const unsubscribe = isDarkMode.init();
-		return unsubscribe;
-	});
+
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);
 	hljs.registerLanguage('javascript', javascript);

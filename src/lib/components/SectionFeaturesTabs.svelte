@@ -195,40 +195,17 @@
 
 <section
 	name="process-features"
-	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-cyan-100 via-fuchsia-100 to-green-100 dark:from-gray-800 dark:via-sky-800 dark:to-purple-800 animate-gradient-xy"
+	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-teal-100 via-fuchsia-100 to-sky-100 dark:from-gray-800 dark:via-sky-800 dark:to-purple-800 animate-gradient-xy"
 >
 	<DotGridWave
-		dotColor={isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)'}
+		dotColor={$isDarkMode ? 'rgba(255, 255, 255, 0.15)' : 'rgba(0, 0, 0, 0.15)'}
 		dotSpacing={20}
 		dotRadius={1}
 		waveDuration={3000}
 		maxScale={5}
 	/>
-	<div class="absolute inset-0 overflow-hidden pointer-events-none">
-		<!-- <div class="hex-grid"></div> -->
-		<!-- <div class="square-grid"></div> -->
-		<!-- <div class="absolute inset-0 overflow-hidden pointer-events-none z-0"> -->
-		<!-- <div class="dot-grid"></div> -->
-		<!-- <div class="dot-grid dot-grid-wave"></div> -->
-		<!-- <div class="dot-grid">
-                {#each Array(400) as _, i}
-                  <div class="dot" style="--delay: {i * 0.05}s;"></div>
-                {/each}
-              </div> -->
-		<!-- </div> -->
-	</div>
+
 	<div class="relative z-10">
-		<div class="absolute inset-0 overflow-hidden pointer-events-none">
-			<div
-				class="absolute -top-16 -left-16 w-32 h-32 bg-cyan-200 dark:bg-cyan-800 rounded-full opacity-20 animate-float"
-			></div>
-			<div
-				class="absolute top-1/2 -right-24 w-48 h-48 bg-blue-200 dark:bg-blue-800 rounded-full opacity-20 animate-float animation-delay-2000"
-			></div>
-			<div
-				class="absolute bottom-20 left-24 w-24 h-24 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20 animate-float animation-delay-4000"
-			></div>
-		</div>
 		<div class="container mx-auto px-4">
 			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl mb-12">
 				<h2 class="text-2xl font-bold leading-none sm:text-4xl mb-4">

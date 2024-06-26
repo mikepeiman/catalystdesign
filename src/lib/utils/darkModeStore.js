@@ -1,32 +1,27 @@
 // src/darkModeStore.js
-import { writable } from 'svelte/store';
+import { readable } from 'svelte/store';
 
-function createDarkModeStore() {
-    const { subscribe, set } = writable(false);
+export const isDarkMode = readable(false, set => {
+  // Function to check if dark mode is active
+  const checkDarkMode = () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    set(isDark);
+  };
 
-    function init() {
-        const isDark = document.documentElement.classList.contains('dark');
-        set(isDark);
+  // Initial check
+  checkDarkMode();
 
-        // Watch for changes to the 'dark' class
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class') {
-                    const isDark = document.documentElement.classList.contains('dark');
-                    set(isDark);
-                }
-            });
-        });
+  // Watch for changes to the 'dark' class
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      if (mutation.attributeName === 'class') {
+        checkDarkMode();
+      }
+    });
+  });
 
-        observer.observe(document.documentElement, { attributes: true });
+  observer.observe(document.documentElement, { attributes: true });
 
-        return () => observer.disconnect();
-    }
-
-    return {
-        subscribe,
-        init
-    };
-}
-
-export const isDarkMode = createDarkModeStore();
+  // Cleanup function
+  return () => observer.disconnect();
+});
