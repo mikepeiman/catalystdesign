@@ -1,5 +1,5 @@
 <!-- Features -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div class="max-w-[100vw] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 	<!-- Tab Nav -->
 	<div
 		class="max-w-6xl mx-auto grid sm:flex gap-y-px sm:gap-y-0 sm:gap-x-4"

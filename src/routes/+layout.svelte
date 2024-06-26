@@ -45,7 +45,7 @@
 		<div class="w-full h-full justify-center align-middle items-center">
 			<slot />
 		</div>
-		<Footer />
+		<!-- <Footer /> -->
 
 		<MambaFooter />
 	</div>
