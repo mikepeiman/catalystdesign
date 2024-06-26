@@ -25,7 +25,7 @@
 
 <section
 	name="layout-main"
-	class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen"
+	class="relative flex flex-col min-w-screen w-fit lg:w-screen min-h-screen bg-white dark:bg-black"
 >
 	<!-- <GridBackground opacityDark={50} opacityLight={50}> -->
 	<div class="flex flex-col w-full h-full z-10">

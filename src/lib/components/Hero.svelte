@@ -12,7 +12,7 @@
 
 <section
 	name="hero"
-	class="hero-main flex flex-col w-full justify-center items-center bg-white/75 dark:bg-black/40 bg-gradient-to-b from-catalyst-300/20 via-black/1 to-catalyst-900/20 border-b-catalyst-300/20 border-b-[1px]"
+	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-300 dark:from-black/50 via-black/5 to-catalyst-700/50 border-b-catalyst-300/20 border-b-[1px]"
 >
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
@@ -29,33 +29,37 @@
 			<p>You've got enough to do. Let us handle this part.</p>
 			<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>
 
-			<div class="cta-section text-base flex my-8 w-full">
+			<div class="cta-section text-base flex my-8 w-full grid grid-cols-2 gap-6">
 				<GradientButton
-					class="mr-6 "
+					class="shadow-lg shadow-black/40 dark:shadow-lg dark:shadow-green-300/40"
 					gradientAngle="110deg"
+					hoverScale=1.015
 					gradientColors={[
 						{ color: 'var(--green-500)', stop: 20 },
 						{ color: 'var(--catalyst-900)', stop: 20 },
 						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
-						{ color: 'var(--green-600)', stop: 0 },
+						{ color: 'var(--green-500)', stop: 0 },
+						{ color: 'var(--catalyst-500)', stop: 25 },
 						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 				>
 					Get a Quick Quote
 				</GradientButton>
 				<GradientButton
-					class=" "
+					class="shadow-lg shadow-black/40 dark:shadow-lg dark:shadow-catalyst-300/40"
 					gradientAngle="110deg"
+					hoverScale=1.015
 					gradientColors={[
-						{ color: 'var(--catalyst-500)', stop: 20 },
+						{ color: 'var(--catalyst-300)', stop: 20 },
 						{ color: 'var(--catalyst-900)', stop: 20 },
 						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
-						{ color: 'var(--catalyst-500)', stop: 0 },
-						{ color: 'var(--catalyst-700)', stop: 100 }
+						{ color: 'var(--catalyst-300)', stop: 0 },
+						{ color: 'var(--catalyst-700)', stop: 25 },
+						{ color: 'var(--catalyst-900)', stop: 100 }
 					]}
 				>
 					See Our Process

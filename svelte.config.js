@@ -19,6 +19,15 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter()
 	},
+	onwarn: (warning, handler) => {
+		// Ignore CSS-related warnings in development
+		// if (process.env.NODE_ENV === 'development' && warning.code.startsWith('css-')) return;
+		if (process.env.NODE_ENV === 'development') return;
+
+	
+		// Handle all other warnings normally
+		handler(warning);
+	  },
 
 };
 export default config;

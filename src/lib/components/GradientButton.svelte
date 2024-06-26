@@ -1,7 +1,7 @@
 <script>
 	import { twMerge } from 'tailwind-merge';
 	export let gradientAngle = '45deg'; // Default angle (45deg)
-	export let gradientAngleHover = '45deg'; // Default hover angle (45deg)
+	export let gradientAngleHover = gradientAngle; // Default hover angle (45deg)
 	export let gradientColors = [
 		{ color: 'var(--catalyst-600)', stop: 0 },
 		{ color: 'var(--purple-800)', stop: 50 },
@@ -63,7 +63,7 @@
 		height: 100%;
 		background-image: var(--gradient-hover-css);
 		z-index: -1;
-
+		transform: scale(var(--hover-scale));
 		transition: all 0.3s ease;
 		opacity: 0;
 	}
