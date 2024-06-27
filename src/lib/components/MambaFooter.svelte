@@ -71,5 +71,5 @@
 			  </div>
 		  </div>
 	  </div>
-	  <div class="py-6 text-sm text-center text-gray-600 dark:text-gray-400">© 1968 Company Co. All rights reserved.</div>
+	  <div class="py-6 text-sm text-center text-gray-600 dark:text-gray-400">&copy; {new Date().getFullYear()} Catalyst Web Design. All rights reserved.</div>
   </footer>

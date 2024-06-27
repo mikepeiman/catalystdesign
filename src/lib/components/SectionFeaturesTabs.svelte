@@ -198,20 +198,20 @@
 
 <section
 	name="process-features"
-	class="pt-24 pb-36 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-catalyst-100 via-gray-200 to-catalyst-300 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
+	class="pt-24 pb-36 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-catalyst-200 via-white to-catalyst-200/0 from-white via-catalyst-200/40 to-white dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
 <!-- <section
 	name="process-features"
 	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-300 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 > -->
 
-    <!-- <DotGridWave
+    <DotGridWave
     class="z-0"
     dotColor="rgba(0, 0, 0, 0.1)"
     waveColorStart="text-catalyst-300"
     waveColorEnd="text-green-500"
-    waveOpacityStart={0.3}
-    waveOpacityEnd={0.3}
+    waveOpacityStart={0.05}
+    waveOpacityEnd={0.05}
     dotSpacing={20}
     dotRadius={1}
     waveDuration={15000}
@@ -220,7 +220,7 @@
     useMouseInteraction={false}
     waveOrigin={{ x: -5, y: -5 }}
     consecutiveWaves={5}
-  /> -->
+  />
 
 	<div class="relative z-10">
 		<div class="container mx-auto px-4 w-fit">
@@ -333,8 +333,10 @@
 		}
 	}
 	.animate-gradient-xy {
-		animation: gradient-xy 15s ease infinite;
-		background-size: 400% 400%;
+		animation: gradient-xy 8s ease infinite;
+		/* background-size: 400% 400%; */
+		/* background-size: 150% 150%; */
+		background-size: 250% 150%;
 	}
 	.hex-grid {
 		position: absolute;
