@@ -12,7 +12,7 @@
 
 <section
 	name="hero"
-	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-300 dark:from-black/50 via-black/5 to-catalyst-700/50 border-b-catalyst-300/20 border-b-[1px]"
+	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-900/20 dark:from-black/50 via-black/5 to-catalyst-200 "
 >
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
