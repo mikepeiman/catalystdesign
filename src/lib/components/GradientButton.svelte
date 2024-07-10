@@ -12,7 +12,7 @@
 		{ color: 'var(--purple-600)', stop: 50 },
 		{ color: 'var(--catalyst-700)', stop: 100 }
 	]; // Default hover colors (blue-700, blue-700, orange-700)
-	export let hoverScale = 1.025; // Default hover scale (1.05)
+	export let hoverScale = 1.025; // Default hover scale
 	let gradientCss = `linear-gradient(${gradientAngle}, ${gradientColors.map((c) => `${c.color} ${c.stop}%`).join(', ')})`;
 	let gradientHoverCss = `linear-gradient(${gradientAngleHover}, ${gradientHoverColors.map((c) => `${c.color} ${c.stop}%`).join(', ')})`;
 	let buttonClass = twMerge(
