@@ -32,14 +32,14 @@
 </script>
 
 <!-- <GridBackground opacityDark={0.85} opacityLight={0.5}> -->
-<div class="flex w-full items-center justify-center">
-<h2>Clients love us!</h2>
+<div class="flex w-full items-center justify-center ">
+	<h2 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl xl:mt-8 text-black dark:text-white/90 z-10  italic font-thin ">What our clients say</h2>
 </div>
 <section
 	name="social"
-	class="bg-catalyst-200 dark:from-catalyst-900 dark:to-catalyst-800  relative dark:bg-black/40 w-full flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-catalyst-300/20 border-b-[1px]"
+	class="bg-catalyst-200 dark:from-catalyst-900 dark:to-catalyst-800 relative dark:bg-black/40 w-full flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-catalyst-300/20 border-b-[1px]"
 >
-<!-- <section
+	<!-- <section
 	name="social"
 	class="bg-gradient-to-br from-catalyst-200 via-white/50 to-catalyst-500 dark:from-catalyst-900 dark:to-catalyst-800  relative dark:bg-black/40 w-full flex flex-col items-center text-black dark:text-white justify-center -mt-6 py-20 border-b-catalyst-300/20 border-b-[1px]"
 > -->
@@ -87,7 +87,7 @@
 	}
 
 	.masked-element {
-		-webkit-mask-image: radial-gradient(ellipse at center, transparent 5%,black);
+		-webkit-mask-image: radial-gradient(ellipse at center, transparent 5%, black);
 		mask-image: radial-gradient(ellipse at center, transparent 50%, black);
 	}
 </style>
