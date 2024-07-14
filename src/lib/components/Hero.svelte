@@ -8,7 +8,7 @@
 <!-- TODO add icons to buttons -->
 <!-- TODO unify color scheme across hero and site (bg gradient, buttons, nav) -->
 <!-- TODO add shadow to H1 -->
-<!-- <div class="section-bg"></div> -->
+<div class="section-bg"></div>
 
 <section
 	name="hero"
