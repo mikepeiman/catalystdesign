@@ -16,7 +16,7 @@
 >
 	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
 		<div
-			class="text-4xl sm:text-5xl -mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
+			class="text-4xl sm:text-5xl lg:-mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
 		>
 			<h1 class=" mb-4">You need a website?</h1>
 			<h1 class="mb-4">We build websites.</h1>
@@ -93,6 +93,12 @@
 	}
 
 	.hero-main {
+		height: 50vh;
+	}
+	@media (min-width: 768px) {
+
+		.hero-main {
 		height: var(--hero-main-height);
+	}
 	}
 </style>
