@@ -14,7 +14,7 @@
 	name="hero"
 	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-900/20 dark:from-black/50 via-black/5 to-catalyst-200 "
 >
-	<div class="w-fit flex flex-col h-full justify-center items-center font-display">
+	<div class="md:w-fit w-full flex flex-col h-full justify-center items-center font-display">
 		<div
 			class="text-4xl sm:text-5xl lg:-mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
 		>
@@ -29,14 +29,14 @@
 			<p>You've got enough to do. Let us handle this part.</p>
 			<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>
 
-			<div class="cta-section text-base flex my-8 w-full grid grid-cols-2 gap-6">
+			<div class="cta-section w-[85vw] md:w-full text-base flex my-8 w-full grid grid-cols-2 gap-6">
 				<GradientButton
-					class="shadow-lg shadow-black/40 dark:shadow-lg dark:shadow-green-300/40"
+					class="shadow-lg shadow-black/40 dark:shadow-xl dark:shadow-white/20"
 					gradientAngle="110deg"
 					hoverScale=1.015
 					gradientColors={[
-						{ color: 'var(--green-500)', stop: 20 },
-						{ color: 'var(--catalyst-900)', stop: 20 },
+						{ color: 'var(--green-500)', stop: 15 },
+						{ color: 'var(--catalyst-900)', stop: 15 },
 						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
@@ -48,12 +48,12 @@
 					Get a Quick Quote
 				</GradientButton>
 				<GradientButton
-					class="shadow-lg shadow-black/40 dark:shadow-lg dark:shadow-catalyst-300/40"
+					class="shadow-lg shadow-black/40 dark:shadow-xl dark:shadow-white/20"
 					gradientAngle="110deg"
 					hoverScale=1.015
 					gradientColors={[
-						{ color: 'var(--catalyst-300)', stop: 20 },
-						{ color: 'var(--catalyst-900)', stop: 20 },
+						{ color: 'var(--catalyst-300)', stop: 15 },
+						{ color: 'var(--catalyst-900)', stop: 15 },
 						{ color: 'var(--catalyst-700)', stop: 100 }
 					]}
 					gradientHoverColors={[
