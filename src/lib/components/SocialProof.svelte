@@ -33,9 +33,7 @@
 
 <!-- <GridBackground opacityDark={0.85} opacityLight={0.5}> -->
 <div class="flex w-full items-center justify-center">
-	{#each Array(5).fill(0) as _}
-		<IconStarFilled class="w-12 h-12 mx-4 my-0 p-0 -mt-6 text-yellow-400 z-10" />
-	{/each}
+<h2>Clients love us!</h2>
 </div>
 <section
 	name="social"

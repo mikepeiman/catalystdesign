@@ -18,7 +18,7 @@
 	}
 </script>
 
-<span class="lg:mr-8">
+<span class="lg:mr-8 flex items-center">
 	{#if isDarkMode}
 		<button
 			id="theme-toggle"
