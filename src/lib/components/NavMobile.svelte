@@ -20,10 +20,10 @@
 <nav
 	class="navbar min-h-[var(--topnav-height)] max-w-screen text-black dark:text-white flex justify-between items-center font-inter bg-white/50 dark:bg-[#050F28]/50 sticky top-0 z-50"
 >
-	<div class="flex items-center justify-center h-full mx-4 left-10">
+	<a href="/"class="flex items-center justify-center h-full mx-4 left-10">
 		<img src="/images/logo-blue.svg" alt="Logo" class="h-10 self-center" />
 		<h3 class="ml-3 text-lg text-catalyst-300 font-bold">Catalyst</h3>
-	</div>
+	</a>
 	<div class="flex justify-end items-center">
 		<button class="lg:hidden text-black dark:text-white text-2xl" on:click={toggleNavbar}>
 			<IconMenu2 />
@@ -38,10 +38,10 @@
 <div class="fixed inset-0 bg-white dark:bg-[#050F28] z-50 lg:hidden">
 	<div class="flex flex-col h-full">
 		<div class="flex justify-between items-center p-4">
-			<div class="flex items-center">
-				<img src="/images/logo-blue.svg" alt="Logo" class="h-12" />
-				<h3 class="ml-3 text-lg font-bold">Catalyst</h3>
-			</div>
+			<a href="/"class="flex items-center justify-center h-full mx-4 left-10">
+				<img src="/images/logo-blue.svg" alt="Logo" class="h-10 self-center" />
+				<h3 class="ml-3 text-lg text-catalyst-300 font-bold">Catalyst</h3>
+			</a>
 			<button class="text-2xl text-black dark:text-white" on:click={toggleNavbar}>
 				<IconX />
 			</button>
