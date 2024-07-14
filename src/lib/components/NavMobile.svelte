@@ -24,6 +24,14 @@
 		<img src="/images/logo-blue.svg" alt="Logo" class="h-10 self-center" />
 		<h3 class="ml-3 text-lg text-catalyst-300 font-bold">Catalyst</h3>
 	</a>
+	<ul class="hidden lg:flex items-center justify-center flex-grow ">
+		{#each items as item}
+			<li class="py-4 text-md font-light mx-3 dark:text-white text-black">
+				<a href={item.url} class="hover:text-gray-300" on:click={toggleNavbar}>{item.name}</a>
+				<!-- <div class="divider border-b-[1px] border-blue-300"></div> -->
+			</li>
+		{/each}
+	</ul>
 	<div class="flex mx-4 lg:mx-0 items-center">
 		<button class="lg:hidden text-black dark:text-white text-2xl" on:click={toggleNavbar}>
 			<IconMenu2 />
