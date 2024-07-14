@@ -64,7 +64,7 @@
 				<img src="/images/logo-blue.svg" alt="Logo" class="h-12" />
 				<h3 class="ml-3 text-lg font-bold">Catalyst</h3>
 			</div>
-			<button class="text-2xl" on:click={toggleNavbar}>
+			<button class="text-2xl text-black dark:text-white" on:click={toggleNavbar}>
 				<IconX />
 			</button>
 		</div>
