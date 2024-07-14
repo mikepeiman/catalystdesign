@@ -23,7 +23,7 @@
 		<button
 			id="theme-toggle"
 			on:click={toggleDarkMode}
-			class="px-4 py-2 bg-none text-primary-700 dark:bg-primary-500 rounded-sm"
+			class="px-4 py-2 bg-none text-white rounded-sm"
 		>
 			<IconSun /></button
 		>
@@ -31,7 +31,7 @@
 		<button
 			id="theme-toggle"
 			on:click={toggleDarkMode}
-			class="px-4 py-2  text-white bg-none  rounded-sm"
+			class="px-4 py-2  text-black bg-none  rounded-sm"
 		>
 			<IconMoon /></button
 		>
