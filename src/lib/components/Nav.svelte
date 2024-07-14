@@ -39,7 +39,7 @@
 
 <nav
 	bind:this={navbar}
-	class="navbar min-h-[var(--topnav-height)] max-w-screen text-black dark:text-white flex justify-between items-center font-inter bg-white/50 dark:bg-[#050F28]/50 sticky top-0 z-50  "
+	class="navbar min-h-[var(--topnav-height)] max-w-screen  flex justify-between items-center font-inter bg-white/50 dark:bg-[#050F28]/50 sticky top-0 z-50  "
 >
 	<div class="flex items-center justify-center h-full mx-4 left-10">
 		<img src="/images/logo-blue.svg" alt="Logo" class="h-12 self-center" />
@@ -48,7 +48,7 @@
 	<div class=" flex justify-around items-center">
 		<ul class="flex justify items-center">
 			{#each items as item}
-				<li class="px-4 py-2 text-md font-medium">
+				<li class="px-4 py-2 text-md font-medium text-black dark:text-white">
 					<a href={item.url} class=" hover:text-gray-300">{item.name}</a>
 				</li>
 			{/each}

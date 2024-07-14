@@ -18,12 +18,12 @@
 	}
 </script>
 
-<span class="mx-2 py-2">
+<span class="lg:mr-8">
 	{#if isDarkMode}
 		<button
 			id="theme-toggle"
 			on:click={toggleDarkMode}
-			class="px-4 py-2 bg-none text-black rounded-sm"
+			class=" bg-none text-black rounded-sm"
 		>
 			<IconSun /></button
 		>
@@ -31,7 +31,7 @@
 		<button
 			id="theme-toggle"
 			on:click={toggleDarkMode}
-			class="px-4 py-2  text-white bg-none  rounded-sm"
+			class="flex items-center  text-white bg-none  rounded-sm"
 		>
 			<IconMoon /></button
 		>
