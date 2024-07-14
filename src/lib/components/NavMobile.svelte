@@ -24,7 +24,7 @@
 		<img src="/images/logo-blue.svg" alt="Logo" class="h-10 self-center" />
 		<h3 class="ml-3 text-lg text-catalyst-300 font-bold">Catalyst</h3>
 	</a>
-	<div class="flex justify-end items-center">
+	<div class="flex mx-4 lg:mx-0 items-center">
 		<button class="lg:hidden text-black dark:text-white text-2xl" on:click={toggleNavbar}>
 			<IconMenu2 />
 		</button>
