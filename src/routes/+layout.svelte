@@ -48,10 +48,5 @@
 		/* min-width: fit-content; */
 		overflow-x: hidden;
 	}
-	/* :global(body,
-	body *, nav, nav *) {
-		transition: all 0.15s ease-in-out ;
-		transition-delay: 0s;
-		
-	} */
+
 </style>

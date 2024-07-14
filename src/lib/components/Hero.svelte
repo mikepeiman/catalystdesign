@@ -8,15 +8,15 @@
 <!-- TODO add icons to buttons -->
 <!-- TODO unify color scheme across hero and site (bg gradient, buttons, nav) -->
 <!-- TODO add shadow to H1 -->
-<div class="section-bg"></div>
+<!-- <div class="section-bg"></div> -->
 
 <section
 	name="hero"
-	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-900/20 dark:from-black/50 via-black/5 to-catalyst-200 "
+	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-900/20 dark:from-black/50 via-black/5 to-catalyst-200/50"
 >
 	<div class="md:w-fit w-full flex flex-col h-full justify-center items-center font-display">
 		<div
-			class="text-4xl sm:text-5xl lg:-mt-[20vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
+			class="text-4xl sm:text-5xl lg:-mt-[12vh] text-center font-extrabold tracking-tight leading-none text-gray-900 lg:text-7xl dark:text-white"
 		>
 			<h1 class=" mb-4">You need a website?</h1>
 			<h1 class="mb-4">We build websites.</h1>
@@ -33,7 +33,7 @@
 				<GradientButton
 					class="shadow-lg shadow-black/40 dark:shadow-xl dark:shadow-white/20"
 					gradientAngle="110deg"
-					hoverScale=1.015
+					hoverScale="1.015"
 					gradientColors={[
 						{ color: 'var(--green-500)', stop: 15 },
 						{ color: 'var(--catalyst-900)', stop: 15 },
@@ -50,7 +50,7 @@
 				<GradientButton
 					class="shadow-lg shadow-black/40 dark:shadow-xl dark:shadow-white/20"
 					gradientAngle="110deg"
-					hoverScale=1.015
+					hoverScale="1.015"
 					gradientColors={[
 						{ color: 'var(--catalyst-300)', stop: 15 },
 						{ color: 'var(--catalyst-900)', stop: 15 },
@@ -88,7 +88,8 @@
 		top: -6vh;
 		left: 0;
 		z-index: -1;
-		height: calc(var(--hero-main-height) + var(--topnav-height) * 2);
+		height: 100vh;
+		/* height: calc(var(--hero-main-height) + var(--topnav-height) * 2); */
 		width: var(--hero-watermark-width);
 	}
 
@@ -96,9 +97,8 @@
 		height: 50vh;
 	}
 	@media (min-width: 768px) {
-
 		.hero-main {
-		height: var(--hero-main-height);
-	}
+			height: var(--hero-main-height);
+		}
 	}
 </style>

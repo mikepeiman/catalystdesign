@@ -12,17 +12,20 @@
 
 </script>
 
-<section name="homepage" class="w-full h-full">
-	<Hero />
-	<!-- <PrelineHeroPolygon /> -->
-	<SocialProof />
-	 <SectionFeaturesTabs />
-	<!-- <MambaFeaturesVTabs /> -->
+<section name="homepage" class="w-full h-full relative">
+	<div class="absolute inset-0 z-0" style="background-image: url('/images/logo-blue.svg'); background-position: center; background-repeat: no-repeat; background-size: cover; opacity: 0.3; top: -6vh; height: 140vh; width: 140%;">
+	</div>
+	<div class="relative z-10">
+	  <div class="hero-section">
+		<Hero />
+	  </div>
+	  <div class="social-section">
+		<SocialProof />
+	  </div>
+	</div>
+	<SectionFeaturesTabs />
 	<PrelineFeaturesVTabs />
 	<PrelineFeaturesHTabs />
 	<BlogSection />
 	<PricingTable />
-</section>
-
-<style>
-</style>
+  </section>
