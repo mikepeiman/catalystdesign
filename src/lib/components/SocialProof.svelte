@@ -1,21 +1,21 @@
 <script lang="ts">
 	let socialData = [
 		{
-			name: 'Analise',
+			name: 'Lucas',
 			avatar: './images/avatars/avatar-1.jpg',
 			stars: 5,
 			description:
 				"The team at Catalyst did an amazing job on our website redesign. Their attention to detail and creative vision have taken our online presence to the next level. We've seen a significant increase in engagement and conversions since the launch."
 		},
 		{
-			name: 'Davinder',
+			name: 'Matondo',
 			avatar: './images/avatars/avatar-2.jpg',
 			stars: 5,
 			description:
 				'Catalyst exceeded our expectations in every way. Their expertise in UI/UX design and development has helped us to create a website that truly reflects our brand values. Their team is professional, responsive, and a pleasure to work with.'
 		},
 		{
-			name: 'Kurtis',
+			name: 'Wilhelmus',
 			avatar: './images/avatars/avatar-3.jpg',
 			stars: 5,
 			description:

@@ -7,7 +7,6 @@
 	import typescript from 'highlight.js/lib/languages/typescript';
 	import { onMount } from 'svelte';
 
-
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 
@@ -21,6 +20,30 @@
 		DotBackground
 	} from '$lib/components/ui/GridAndDotBackground';
 
+
+	onMount(() => {
+		const scrollbarWidth = getScrollbarWidth();
+		document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+	});
+	function getScrollbarWidth() {
+		// Create a temporary div with overflow
+		const outer = document.createElement('div');
+		outer.style.visibility = 'hidden';
+		outer.style.overflow = 'scroll';
+		document.body.appendChild(outer);
+
+		// Create an inner div
+		const inner = document.createElement('div');
+		outer.appendChild(inner);
+
+		// Calculate the width difference
+		const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+		// Remove the temporary divs
+		outer.parentNode.removeChild(outer);
+
+		return scrollbarWidth;
+	}
 </script>
 
 <section
@@ -48,5 +71,4 @@
 		/* min-width: fit-content; */
 		overflow-x: hidden;
 	}
-
 </style>
