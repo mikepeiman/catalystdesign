@@ -12,7 +12,10 @@
 
 <section
 	name="hero"
-	class="hero-main flex flex-col w-full justify-center items-center bg-white/50 dark:bg-black/10 bg-gradient-to-b from-catalyst-900/20 dark:from-black/50 via-black/5 to-catalyst-200/50"
+	class="hero-main flex flex-col w-full justify-center items-center
+	bg-white/20 bg-gradient-to-b from-slate-100/50 via-white/45 to-catalyst-400/50
+	 dark:bg-black/20 dark:bg-gradient-to-b dark:from-fuchsia-800/20  dark:via-catalyst-500/20 dark:to-catalyst-900/40
+	 "
 >
 	<div class="md:w-fit w-full flex flex-col h-full justify-center items-center font-display">
 		<div
@@ -24,7 +27,7 @@
 		</div>
 
 		<div
-			class="subtext text-black dark:text-white font-inter flex flex-col items-center justify-center font-extralight text-base md:text-xl text-center mt-8 w-full"
+			class="subtext bg-white text-black dark:bg-black/0 dark:text-white font-inter flex flex-col tracking-normal font-light items-center justify-center font-extralight shadow-2xl dark:shadow-none pt-4 px-12 text-xl md:text-2xl text-center mt-12 w-full"
 		>
 			<p>You've got enough to do. Let us handle this part.</p>
 			<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>

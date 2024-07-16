@@ -32,13 +32,19 @@
 </script>
 
 <!-- <GridBackground opacityDark={0.85} opacityLight={0.5}> -->
-	<section
+<!-- style="background-image: var(--catalyst-gradient-tertiary);" -->
+<section
 	name="social"
 	style="background-image: var(--catalyst-gradient-tertiary);"
-	class="bg-gradient-to-br from-catalyst-200 via-white/50 to-catalyst-500 dark:from-catalyst-900 dark:to-catalyst-800 relative dark:bg-black/0 w-full flex flex-col items-center text-black dark:text-white justify-center  py-20 border-b-catalyst-300/20 border-b-[1px]"
-	>
-	<div class="flex w-full items-center justify-center ">
-		<h2 class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl xl:mt-8 text-black dark:text-white/90 z-10 mb-12 italic font-thin ">What our clients say</h2>
+	class="bg-black bg-gradient-to-br from-catalyst-200 via-white/30 to-catalyst-500
+	 dark:from-catalyst-900 dark:via-catalyst-700 dark:to-catalyst-900 relative dark:bg-black/0 w-full flex flex-col items-center text-black dark:text-white justify-center py-20 "
+>
+	<div class="flex w-full items-center justify-center">
+		<h2
+			class="text-3xl md:text-3xl lg:text-4xl xl:text-5xl xl:mt-8 text-black dark:text-white/90 z-10 mb-12 italic font-thin"
+		>
+			What our clients say
+		</h2>
 	</div>
 	<!-- <section
 	name="social"
