@@ -206,25 +206,28 @@
 	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-300 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 > -->
 
-    <DotGridWave
-    class="z-0"
-    dotColor="rgba(0, 0, 0, 0.1)"
-    waveColorStart="text-catalyst-300"
-    waveColorEnd="text-green-500"
-    waveOpacityStart={0.05}
-    waveOpacityEnd={0.05}
-    dotSpacing={20}
-    dotRadius={1}
-    waveDuration={15000}
-    maxScale={5}
-    numWaves={6}
-    useMouseInteraction={false}
-    waveOrigin={{ x: -5, y: -5 }}
-    consecutiveWaves={5}
-  />
+<DotGridWave
+class="z-0"
+dotColor="rgba(0, 0, 0, 0.1)"
+waveColorStart="text-fuchsia-800"
+waveColorEnd="text-catalyst-700"
+waveOpacityStart={.01}
+waveOpacityEnd={.025}
+dotSpacing={45}
+dotRadius={55}
+waveDuration={15000}
+maxScale={5}
+numWaves={16}
+useMouseInteraction={false}
+waveOrigin={{ x: -5, y: -5 }}
+consecutiveWaves={5}
+/>
+
 
 	<div class="relative z-10">
+
 		<div class="container mx-auto px-4 w-fit">
+			
             <BlurredBackdrop
             class="z-10"
             blurAmount={5}
@@ -232,7 +235,10 @@
             backgroundColor="rgba(255, 255, 255, 0)"
           >
 			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-4xl mb-12">
+				
+
 				<h2 class="text-2xl font-bold leading-none sm:text-4xl mb-4">
+		
 					Seamless Design to Growth Process
 				</h2>
 				<p class="px-4 sm:px-8">
