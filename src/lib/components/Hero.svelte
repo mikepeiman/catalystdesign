@@ -27,7 +27,7 @@
 		</div>
 
 		<div
-			class="subtext bg-white text-black dark:bg-black/0 dark:text-white font-inter flex flex-col tracking-normal font-light items-center justify-center font-extralight shadow-2xl dark:shadow-none pt-4 px-12 text-xl md:text-2xl text-center mt-12 w-full"
+			class="subtext bg-white text-black dark:bg-black/0 dark:text-white font-inter flex flex-col tracking-normal rounded-md items-center justify-center font-extralight shadow-2xl dark:shadow-none pt-4 px-12 text-xl md:text-2xl text-center mt-12 w-full"
 		>
 			<p>You've got enough to do. Let us handle this part.</p>
 			<p class="mt-1">Quick, easy, and stress-free. That's our process.</p>

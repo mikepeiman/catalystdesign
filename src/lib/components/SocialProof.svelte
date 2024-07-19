@@ -36,8 +36,8 @@
 <section
 	name="social"
 	style="background-image: var(--catalyst-gradient-tertiary);"
-	class="bg-black bg-gradient-to-br from-catalyst-200 via-white/30 to-catalyst-500
-	 dark:from-catalyst-900 dark:via-catalyst-700 dark:to-catalyst-900 relative dark:bg-black/0 w-full flex flex-col items-center text-black dark:text-white justify-center py-20 "
+	class="bg-black bg-gradient-to-br from-catalyst-200 via-white/30 to-catalyst-500 rounded-md
+	 dark:bg-black/20 dark:bg-gradient-to-b dark:from-fuchsia-800/20  dark:via-catalyst-500/20 dark:to-catalyst-900/40 relative dark:bg-black/0 w-full flex flex-col items-center text-black dark:text-white justify-center py-20 "
 >
 	<div class="flex w-full items-center justify-center">
 		<h2

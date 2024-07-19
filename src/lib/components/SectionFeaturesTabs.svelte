@@ -198,8 +198,9 @@
 
 <section
 	name="process-features"
-	class="pt-24 pb-36 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-br from-catalyst-200 via-white to-catalyst-200/0 from-white via-catalyst-200/40 to-white dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
+	class="pt-24 pb-36 max-w-[100vw] bg-white p-[2rem] bg-clip-padding dark:bg-black/20  text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0  from-catalyst-200 via-white to-catalyst-200/0 from-white via-catalyst-200/40 to-white dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
+<!-- section needs bg-gradient in order to display DotGridWave -->
 <!-- <section
 	name="process-features"
 	class="py-12 max-w-[100vw] bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-300 via-gray-200 to-catalyst-100 dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"

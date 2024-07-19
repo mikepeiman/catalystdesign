@@ -24,13 +24,15 @@
 			<Hero />
 		</section>
 		<!-- <div class="tile-transition"></div> -->
-		<section class="section section-2 border-[2rem] p-[2rem] border-catalyst-100/20">
+		<section class="section section-2  p-[2rem] bg-clip-padding dark:bg-black/20 ">
 			<!-- Content for section 2 -->
 			<SocialProof />
 		</section>
 	</div>
 	<!-- <PrelineHeroPolygon /> -->
+	<section class="section section-2  p-[2rem] bg-clip-padding dark:bg-black/20 ">
 	<SectionFeaturesTabs />
+	</section>
 	<!-- <MambaFeaturesVTabs /> -->
 	<PrelineFeaturesVTabs />
 	<PrelineFeaturesHTabs />
