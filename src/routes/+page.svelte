@@ -17,34 +17,34 @@
 
 <section name="homepage" class="w-full h-full">
 	<div class="section-wrapper">
-		<section class="section  dark:bg-black/20">
+		<section class="section dark:bg-black/20">
 			<!-- border and padding style -->
 			<!-- <section class="section section-1  dark:bg-black/20 border-[2rem] p-[2rem] border-catalyst-100/20"> -->
 			<!-- Content for section 1 -->
 			<Hero />
 		</section>
 		<!-- <div class="tile-transition"></div> -->
-		<section class="section  p-[2rem] bg-clip-padding dark:bg-black/20 ">
+		<section class="section p-[2rem] bg-clip-padding dark:bg-black/20">
 			<!-- Content for section 2 -->
 			<SocialProof />
 		</section>
 	</div>
 	<!-- <PrelineHeroPolygon /> -->
-	<section class="section  p-[2rem] bg-clip-padding dark:bg-black/20 ">
-	<SectionFeaturesTabs />
+	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+		<SectionFeaturesTabs />
 	</section>
 	<!-- <MambaFeaturesVTabs /> -->
-	<section class="section  p-[2rem] bg-clip-padding dark:bg-black/20 ">
-	<PrelineFeaturesVTabs />
+	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+		<PrelineFeaturesVTabs />
 	</section>
-	<section class="section  p-[2rem] bg-clip-padding dark:bg-black/20 ">
-	<PrelineFeaturesHTabs />
+	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+		<PrelineFeaturesHTabs />
 	</section>
-	<section class="section  p-[2rem] bg-clip-padding dark:bg-black/20 ">
-	<BlogSection />
+	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+		<BlogSection />
 	</section>
-	<section class="section  p-[2rem] bg-clip-padding dark:bg-black/20 ">
-	<PricingTable />
+	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+		<PricingTable />
 	</section>
 </section>
 

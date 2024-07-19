@@ -198,7 +198,7 @@
 
 <section
 	name="process-features"
-	class="pt-24 pb-36 max-w-[100vw] bg-white p-[2rem] bg-clip-padding dark:bg-black/20  text-gray-800 dark:text-gray-100 relative overflow-hidden inset-0  from-catalyst-200 via-white to-catalyst-200/0 from-white via-catalyst-200/40 to-white dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
+	class="pt-24 pb-36 max-w-[100vw] bg-white rounded-md  dark:bg-black/20  text-gray-800 dark:text-white relative overflow-hidden inset-0 bg-gradient-to-tr from-catalyst-200 via-white to-catalyst-200/0 from-white  dark:from-catalyst-900 dark:via-gray-900 dark:to-catalyst-800 animate-gradient-xy"
 >
 <!-- section needs bg-gradient in order to display DotGridWave -->
 <!-- <section
@@ -207,17 +207,17 @@
 > -->
 
 <DotGridWave
-class="z-0"
+class="z-0 rounded-md"
 dotColor="rgba(0, 0, 0, 0.1)"
 waveColorStart="text-fuchsia-800"
 waveColorEnd="text-catalyst-700"
 waveOpacityStart={.01}
-waveOpacityEnd={.025}
+waveOpacityEnd={.01}
 dotSpacing={45}
-dotRadius={55}
-waveDuration={15000}
-maxScale={5}
-numWaves={16}
+dotRadius={35}
+waveDuration={85000}
+maxScale={4}
+numWaves={15}
 useMouseInteraction={false}
 waveOrigin={{ x: -5, y: -5 }}
 consecutiveWaves={5}
