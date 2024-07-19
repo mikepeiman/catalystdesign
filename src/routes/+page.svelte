@@ -37,14 +37,14 @@
 	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
 		<PrelineFeaturesVTabs />
 	</section>
-	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+	<!-- <section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
 		<PrelineFeaturesHTabs />
+	</section> -->
+	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
+		<PricingTable />
 	</section>
 	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
 		<BlogSection />
-	</section>
-	<section class="section-wrapper p-[2rem] bg-clip-padding dark:bg-black/20">
-		<PricingTable />
 	</section>
 </section>
 

@@ -1,6 +1,6 @@
 <script>
   import { fade, fly } from 'svelte/transition';
-  import { quintOut, cubicInOut } from 'svelte/easing';
+  import { cubicInOut } from 'svelte/easing';
   import Icon from '@iconify/svelte';
 
   let activeTab = 0;
@@ -40,80 +40,66 @@
   }
 </script>
 
-<div class="max-w-[100vw] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto bg-white dark:bg-gray-900 transition-colors duration-300">
-  <div class="relative p-6 md:p-16">
-    <div class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
-      <div class="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
-        <h2 class="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-white mb-6 transition-colors duration-300"
-            in:fly="{{ y: 20, duration: 600, delay: 200, easing: cubicInOut }}">
-          Elevate Your Digital Presence
-        </h2>
+<div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14  transition-colors duration-300">
+  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center transition-colors duration-300"
+      in:fly="{{ x: -20, duration: 600, delay: 200, easing: cubicInOut }}">
+    Elevate Your Digital Presence
+  </h2>
 
-        <nav class="grid gap-4 mt-5 md:mt-10" aria-label="Tabs" role="tablist">
-          {#each services as service, index}
-            <div in:fly="{{ y: 20, duration: 600, delay: 200 + index * 100, easing: cubicInOut }}">
-              <button
-                type="button"
-                class="group hs-tab-active:bg-white hs-tab-active:shadow-md text-start hover:bg-gray-100 p-4 md:p-5 rounded-xl dark:hs-tab-active:bg-gray-800 dark:hover:bg-gray-800 transition-all duration-300 ease-in-out w-full {activeTab === index ? 'bg-white shadow-md dark:bg-gray-800' : 'bg-gray-50 dark:bg-gray-900'}"
-                id="tabs-with-card-item-{index + 1}"
-                data-hs-tab="#tabs-with-card-{index + 1}"
-                aria-controls="tabs-with-card-{index + 1}"
-                role="tab"
-                on:click={() => setActiveTab(index)}
-              >
-                <span class="flex items-center">
-                  <Icon icon={service.icon} class="flex-shrink-0 mt-2 size-6 md:size-7 text-gray-800 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-blue-400 transition-colors duration-300" />
-                  <span class="grow ms-6">
-                    <span class="block text-lg font-semibold text-gray-800 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 transition-colors duration-300">{service.title}</span>
-                    <span class="block mt-1 text-gray-600 dark:text-gray-300 transition-colors duration-300">{service.description}</span>
-                  </span>
-                  <Icon icon="tabler:chevron-right" class="flex-shrink-0 size-5 text-gray-600 group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-400 transition-colors duration-300" />
-                </span>
-              </button>
+  <!-- Large screens -->
+  <div class="hidden lg:block">
+    <div class="flex justify-center mb-8">
+      {#each services as service, index}
+        <button
+          class="px-6 py-3 text-lg font-semibold transition-all duration-300 ease-in-out {activeTab === index ? 'text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400' : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}"
+          on:click={() => setActiveTab(index)}
+        >
+          {service.title}
+        </button>
+      {/each}
+    </div>
+
+    <div class="relative overflow-hidden" style="height: 400px;">
+      {#each services as service, index}
+        {#if activeTab === index}
+          <div class="absolute top-0 left-0 w-full h-full grid grid-cols-2 gap-8 items-center"
+               in:fly="{{ x: 100, duration: 300, easing: cubicInOut }}"
+               out:fly="{{ x: -100, duration: 300, easing: cubicInOut }}">
+            <div class="max-w-xl">
+              <h3 class="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">{service.title}</h3>
+              <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">{service.expanded}</p>
+              <a href="#" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300">
+                {service.cta}
+              </a>
             </div>
-          {/each}
-        </nav>
+            <div class="h-[400px]">
+              <img src={service.image} alt={service.title} class="w-full h-full object-cover rounded-xl shadow-lg">
+            </div>
+          </div>
+        {/if}
+      {/each}
+    </div>
+  </div>
 
-        <div class="mt-6 h-[150px] relative overflow-hidden">
-          {#each services as service, index}
-            {#if activeTab === index}
-              <div class="absolute inset-0"
-                   in:fly="{{ y: 20, duration: 300, delay: 50, easing: cubicInOut }}"
-                   out:fade="{{ duration: 200 }}">
-                <p class="text-gray-600 dark:text-gray-300 transition-colors duration-300 mb-4">
-                  {service.expanded}
-                </p>
-                <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300">
-                  {service.cta}
-                </a>
-              </div>
-            {/if}
-          {/each}
+  <!-- Medium screens and below -->
+  <div class="lg:hidden space-y-12">
+    {#each services as service, index}
+      <div class="{index % 2 === 0 ? 'md:pr-6' : 'md:pl-6'}"
+           in:fly="{{ x: index % 2 === 0 ? -20 : 20, duration: 600, delay: 200 + index * 100, easing: cubicInOut }}">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+          <div class="p-6">
+            <Icon icon={service.icon} class="w-12 h-12 text-blue-600 dark:text-blue-400 mb-4" />
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{service.title}</h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4 max-w-prose">{service.description}</p>
+            <a href="#" class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-300">
+              {service.cta}
+            </a>
+          </div>
+          <div class="h-48 md:h-64">
+            <img src={service.image} alt={service.title} class="w-full h-full object-cover">
+          </div>
         </div>
       </div>
-
-      <div class="lg:col-span-6">
-        <div class="relative h-[400px]">
-          {#each services as service, index}
-            {#if activeTab === index}
-              <div id="tabs-with-card-{index + 1}" 
-                   role="tabpanel" 
-                   aria-labelledby="tabs-with-card-item-{index + 1}"
-                   class="absolute inset-0"
-                   in:fade="{{ duration: 300, delay: 150 }}"
-                   out:fade="{{ duration: 200 }}">
-                <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-800/20 transition-all duration-300 object-cover w-full h-full" 
-                     src={service.image} 
-                     alt={service.title}>
-              </div>
-            {/if}
-          {/each}
-        </div>
-      </div>
-    </div>
-
-    <div class="absolute inset-0 grid grid-cols-12 size-full">
-      <div class="col-span-full lg:col-span-7 lg:col-start-6 bg-gray-100 w-full h-5/6 rounded-xl sm:h-3/4 lg:h-full dark:bg-gray-800 transition-colors duration-300"></div>
-    </div>
+    {/each}
   </div>
 </div>
